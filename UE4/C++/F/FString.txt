@@ -1,0 +1,6 @@
+构造方法
+FString(TEXT( "text" ))  把字符串text 转换成 FString类型
+
+静态方法
+FString FString::FromInt( int )  把 int 转换成 FString 类型,返回FString类型
+FString FString::SanitizeFloat( float ) 把 float 转换成 FString 类型,返回FString类型

@@ -1,0 +1,6 @@
+方法
+bool IsValid() 时间句柄是否有意义
+
+使用方法
+void GetWorldTimerManager().ClearTimer( FTimerHandle ) 清除时间句柄
+void GetWorldTimerManager().SetTimer(FTimerHandle , this, &Class::Function, float, true) 设置时间句柄调用的方法，每float时间调用一次

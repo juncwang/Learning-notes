@@ -1,0 +1,7 @@
+静态方法
+number FMath::RandRange( min , max ) 返回 min 到 max 的一个随机数
+number FMath::Sin( number ) 参数 number 的正弦值。返回值在 -1.0 到 1.0 之间
+
+bool IsNearlyEqual(float A, float B, float c) ;  a-b的绝对值 小于等于 c 返回真
+
+FRotator FMath::RInterpTo( thisRotation, tragetRotation, GetWorld()->GetRealTimeSeconds(), speed) 按speed的速度从 目前的旋转，到目标的旋转值

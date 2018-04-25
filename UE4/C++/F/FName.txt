@@ -1,0 +1,5 @@
+构造方法
+FName( *FString ) 将 FString 转换成 FName ，转换中存在损耗，不再区分大小写
+
+方法
+FString ToString() 把自身转换成 FString 类型

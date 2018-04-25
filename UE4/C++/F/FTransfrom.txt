@@ -1,0 +1,5 @@
+方法
+FVector GetLocation() 获取自己的位置信息
+void SetLocation(FVector) 设置Transform 的位置
+FRotator Rotator() 获取自己的旋转信息_经过四位运算后的
+void SetRotation(FQuat)设置Transform的四位旋转

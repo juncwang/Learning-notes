@@ -1,0 +1,2 @@
+把TSubclassOf 类型数据转换为指针类型数据
+NewObject<UObject>(GetWorld(), tsubclass0f );

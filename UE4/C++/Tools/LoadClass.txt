@@ -1,0 +1,9 @@
+加载蓝图方法
+LoadClass<AActor>(NULL, TEXT("Blueprint'/Game/Meshes/Coin/Blueprint/BP_CoinG.BP_CoinG_C'"));
+返回一个 TSubclassOf<AActor> 类型
+需要在最后面加一个 _C
+
+加载C++类方法
+LoadClass<AActor>(NULL, TEXT("Blueprint'/Game/Meshes/Coin/Blueprint/BP_CoinG.BP_CoinG'"));
+返回一个 TSubclassOf<AActor> 类型
+不需要在最后面加一个 _C

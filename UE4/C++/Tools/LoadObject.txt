@@ -1,0 +1,4 @@
+加载资源方法
+LoadObject<USoundBase>(NULL, TEXT("SoundCue'/Game/Sound/CoinSound_Cue.CoinSound_Cue'"));
+返回一个 USoundBase* 对象
+不能在后面加 _C

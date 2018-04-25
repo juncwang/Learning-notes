@@ -1,0 +1,8 @@
+静态方法
+FColor FColor::Blue 返回蓝色
+FColor FColor::Green 返回绿色
+FColor FColor::Red 返回红色
+FColor FColor::Purple 返回紫色
+FColor FColor::Yellow 返回黄色
+FColor Fcolor::Black 返回黑色
+FColor FColor::Cyan 返回浅蓝色

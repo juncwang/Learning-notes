@@ -1,0 +1,4 @@
+方法：
+
+需要在项目头文件内包括 #include "Engine.h"
+void GEngine->AddOnScreenDebugMessage(int,float,FColor,FString) 在显示屏左上方打印文字

@@ -1,0 +1,2 @@
+构造方法
+FQuat FQuat（Rotator）; 将 Rotator 转成 FQuat

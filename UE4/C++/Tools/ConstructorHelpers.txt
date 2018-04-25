@@ -1,0 +1,12 @@
+头文件 Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h
+
+静态方法
+
+static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacter"));
+TSubclassOf<APawn> MyPawn = PlayerPawnBPClass.Class;
+获取资源
+
+static ConstructorHelpers::FObjectFinder<USoundBase>CH_soundBase(
+TEXT("/Game/Sound/CoinSound_Cue"));
+USoundBase* CoinSound = CH_soundBase.Object;
+获取对象
