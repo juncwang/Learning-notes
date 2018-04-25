@@ -1,29 +1,29 @@
-¿ÉÖØĞ´·½·¨
+å¯é‡å†™æ–¹æ³•
 
-BeginPlay µÚÒ»´Î¼ÓÔØ¸ÃÀàÊ±µ÷ÓÃ
+BeginPlay ç¬¬ä¸€æ¬¡åŠ è½½è¯¥ç±»æ—¶è°ƒç”¨
 virtual void BeginPlay() override;
 
 
-Tick Ã¿Ò»Ö¡¶¼»áµ÷ÓÃ
+Tick æ¯ä¸€å¸§éƒ½ä¼šè°ƒç”¨
 virtual void Tick(float DeltaTime) override;
 
-ÔÚÑİÔ±³öÏÖÊ±£¨ÔÚÔËĞĞÊ±»òÔÚ±à¼­Æ÷ÖĞ½«Æä·ÅÈëÊÀ½çÊ±£©µ÷ÓÃ¸Ã·½·¨¡£
+åœ¨æ¼”å‘˜å‡ºç°æ—¶ï¼ˆåœ¨è¿è¡Œæ—¶æˆ–åœ¨ç¼–è¾‘å™¨ä¸­å°†å…¶æ”¾å…¥ä¸–ç•Œæ—¶ï¼‰è°ƒç”¨è¯¥æ–¹æ³•ã€‚
 virtual void PostActorCreated() override;
 
-ÔÚÑİÔ±ÒÑ¾­½øÈë¼¶±ğ²¢ÇÒµØÍ¼´ò¿ªÊ±µ÷ÓÃ¸Ã·½·¨
+åœ¨æ¼”å‘˜å·²ç»è¿›å…¥çº§åˆ«å¹¶ä¸”åœ°å›¾æ‰“å¼€æ—¶è°ƒç”¨è¯¥æ–¹æ³•
 virtual void PostLoad() override;
 
 
-·½·¨
+æ–¹æ³•
 
-FVector GetActorLocation() ·µ»Ø½ÇÉ«ÔÚ³¡¾°ÄÚµÄÎ»ÖÃĞÅÏ¢
-void SetActorLocation( FVector ) ÉèÖÃ½ÇÉ«ÔÚ³¡¾°ÄÚµÄÎ»ÖÃ
+FVector GetActorLocation() è¿”å›è§’è‰²åœ¨åœºæ™¯å†…çš„ä½ç½®ä¿¡æ¯
+void SetActorLocation( FVector ) è®¾ç½®è§’è‰²åœ¨åœºæ™¯å†…çš„ä½ç½®
 
-FRotator GetActorRotation() ·µ»Ø½ÇÉ«ÔÚ³¡¾°ÄÚµÄĞı×ªĞÅÏ¢
-void SetActorRotation( FRotator ) ÉèÖÃ½ÇÉ«ÔÚ³¡¾°ÄÚµÄĞı×ª
+FRotator GetActorRotation() è¿”å›è§’è‰²åœ¨åœºæ™¯å†…çš„æ—‹è½¬ä¿¡æ¯
+void SetActorRotation( FRotator ) è®¾ç½®è§’è‰²åœ¨åœºæ™¯å†…çš„æ—‹è½¬
 
-GetWorldTimerManager().ClearTimer( FTimerHandle ) Çå³ıÊ±¼ä¾ä±ú
-GetWorldTimerManager().SetTimer(FTimerHandle , this, &Class::Function, float, true) ÉèÖÃÊ±¼ä¾ä±úµ÷ÓÃµÄ·½·¨£¬Ã¿floatÊ±¼äµ÷ÓÃ
+GetWorldTimerManager().ClearTimer( FTimerHandle ) æ¸…é™¤æ—¶é—´å¥æŸ„
+GetWorldTimerManager().SetTimer(FTimerHandle , this, &Class::Function, float, true) è®¾ç½®æ—¶é—´å¥æŸ„è°ƒç”¨çš„æ–¹æ³•ï¼Œæ¯floatæ—¶é—´è°ƒç”¨
 
-±äÁ¿
-PrimaryActorTick.bCanEverTick = true; ´ò¿ªÃ¿Ö¡µ÷ÓÃº¯Êı Tick()
+å˜é‡
+PrimaryActorTick.bCanEverTick = true; æ‰“å¼€æ¯å¸§è°ƒç”¨å‡½æ•° Tick()
