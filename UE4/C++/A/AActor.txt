@@ -1,0 +1,29 @@
+可重写方法
+
+BeginPlay 第一次加载该类时调用
+virtual void BeginPlay() override;
+
+
+Tick 每一帧都会调用
+virtual void Tick(float DeltaTime) override;
+
+在演员出现时（在运行时或在编辑器中将其放入世界时）调用该方法。
+virtual void PostActorCreated() override;
+
+在演员已经进入级别并且地图打开时调用该方法
+virtual void PostLoad() override;
+
+
+方法
+
+FVector GetActorLocation() 返回角色在场景内的位置信息
+void SetActorLocation( FVector ) 设置角色在场景内的位置
+
+FRotator GetActorRotation() 返回角色在场景内的旋转信息
+SetActorRotation( FRotator ) 设置角色在场景内的旋转
+
+GetWorldTimerManager().ClearTimer( FTimerHandle ) 清除时间句柄
+GetWorldTimerManager().SetTimer(FTimerHandle , this, &Class::Function, float, true) 设置时间句柄调用的方法，每float时间调用
+
+变量
+PrimaryActorTick.bCanEverTick = true; 打开每帧调用函数 Tick()
