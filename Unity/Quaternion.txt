@@ -1,0 +1,9 @@
+静态变量
+Quaternion.identity 返回(0,0,0,0)的四维坐标系
+
+静态方法
+Quaternion.Euler( Vector3 ) 将三维坐标系转为四维坐标系
+Quaternion.AngleAxis( fAngle , Vector3 ) 围绕 Vector3 旋转 fAngle 度，并返回四维坐标系
+Quaternion.LookRotation(vTarget - vPos,Vector3.up) 将方向值转换成旋转值，并放回四维坐标系
+Quaternion.RotateTowards(rFormRot, rTargetRot, fTime); 按fTime时间比率将对象旋转步步改为目标旋转
+Quaternion.Slerp(rFormRot, rTargetRot, fdamping) 将对象步步改为目标旋转，按阻力大小Lerp

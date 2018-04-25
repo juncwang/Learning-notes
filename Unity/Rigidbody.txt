@@ -1,0 +1,4 @@
+变量：
+
+position 位置信息
+velocity 速度向量信息

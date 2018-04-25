@@ -1,0 +1,7 @@
+静态方法：
+
+Mathf.Clamp(fValue,fMin,fMax) 限制value的值在min和max之间， 如果value小于min，返回min。 如果value大于max，返回max，否则返回value
+Mathf.Lerp("f当前值", "f目标值", "f时间")使数值更具一定 时间 从 当前值 变换到 目标值，并返回一个根据时间计算出来的值
+Mathf.Min(fA,fB) 返回两个或更多值中最小的值
+Mathf.Max(fA,fB) 返回两个或更多值中最大的值
+Mathf.SmoothDamp（"f当前值","f目标值",ref "f缓存","f时间")让当前值根据一定时间逐渐变为目标值, 缓存 (随意创建一个变量作为方法体缓存空间使用)

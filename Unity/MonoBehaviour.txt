@@ -1,0 +1,15 @@
+重写方法
+void Awake(){}
+在游戏运行前执行
+void Start(){}
+游戏开始运行时执行
+void Update(){}
+游戏每一帧执行一次
+void FixedUpdate()
+游戏按每秒50次进行执行
+
+方法：
+GetComponent<"s组件名称">()
+通过 组件名称 获取该游戏对象上的其他组件
+print("打印内容")
+系统更具 打印内容 在控制台打印出信息

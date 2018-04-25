@@ -1,0 +1,15 @@
+使用前需加入头文件
+
+在 Project_Name.Build.cs 中加入
+PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "UMG" });
+
+在 Project_Name.h 中加入
+#include "Runtime/UMG/Public/UMG.h"
+#include "Runtime/UMG/Public/UMGStyle.h"
+#include "Runtime/UMG/Public/Slate/SObjectWidget.h"
+#include "Runtime/UMG/Public/IUMGModule.h"
+#include "Runtime/UMG/Public/Blueprint/UserWidget.h"
+
+加载方式，创建并获取 TSubclassOf<UUserWidget> T_UIMain
+并通过 UUserWidget* U_UIMain= CreateWidget<UUserWidget>(GetWorld(), T_UIMain);  获取到实例
+最后通过 U_UIMain->AddToViewport 方法添加到荧屏上

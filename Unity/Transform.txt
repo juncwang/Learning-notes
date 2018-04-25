@@ -1,0 +1,14 @@
+获取方式
+GetComponent<Transform>() 获取当前对象的Transform
+
+变量
+Transform.position 对象的世界坐标位置信息
+Transform.localRotation 对象的相对旋转值（四维运算)
+Transform.rotation 对象的世界旋转值（四维运算)
+
+Transform.up 对象上方向
+Transform.right 对象右方向
+Transform.forward 对象前方向
+
+方法
+Transform.TransformDirection(vLocalSpaceDisplacement); 将局部坐标转成世界坐标。等同于一下方式：Transform.rotation * localSpaceDisplacement

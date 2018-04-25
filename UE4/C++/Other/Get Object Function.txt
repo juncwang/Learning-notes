@@ -1,0 +1,34 @@
+方法一
+.h
+UPROPERTY()
+AActor* A_Task;
+直接创建
+
+方法二
+.h
+TSubclassOf<AActor> GetInstanceForB; 
+.cpp
+static ConstructorHelpers::FClassFinder<AActor>MyActor(TEXT("/Game/Blueprint/BP_B_Actor")); 获取资源库内的Actor (构造函数内),需要引入UObject/ConstructorHelpers.h
+GetInstanceForB = MyActor.Class; 把 MyActor 的类传给 GetInstanceForB(构造函数内)
+
+方法三
+.cpp
+TSubclassOf<AActor> FloorTle_1 = LoadClass<AActor>(NULL,TEXT("Blueprint'/Game/BP/BP_Floor.BP_Floor_C'"));
+直接通过 LoadClass读取 文件名后需要加入 _C
+
+方法四
+.cpp
+AActor* Actor;
+for (TActorIterator<AActor>It(GetWorld());It;++It)
+	{
+		Actor = *It;
+		if (Actor)
+		{
+			Other_Actor* O_Actor = Cast<Other_Actor>(Actor);
+			if (O_Actor)
+			{
+				O_Actor ... ... 执行函数操作
+			}
+		}
+	}
+获取场景内所有的 Actor并对其进行操作,需要引入Runtime/Engine/Public/EngineUtils.h

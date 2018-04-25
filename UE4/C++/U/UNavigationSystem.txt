@@ -1,0 +1,5 @@
+头文件 Runtime/Engine/Classes/AI/Navigation/NavigationSystem.h
+
+静态方法
+UNavigationSystem::SimpleMoveToLocation(SelectedActors[i]->GetController(), MoveLocation);
+将Actor的控制器进行移动操作；

@@ -1,0 +1,7 @@
+方法
+UInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump); 绑定系统设置input内 Jump名字的按键，当按下时在本类中执行Jump方法
+
+UInputComponent->BindAxis("MoveForward", this, &ARunGameCharacter::MoveForward); 绑定系统设置input内 MoveForward 名字的按键，按下时从 0 到 1 迅速增加，最多到1直至松开按键，并执行本类中的MoveForward方法. 
+MoveForward方法必须有个传入浮点参数 Value
+
+UInputComponent->BindTouch(IE_Pressed, this, &ARunGameCharacter::TouchStarted); 绑定 触碰时间，当触碰下是，执行本类的 touchStarted方法，该方法必须传入(ETouchIndex::Type FingerIndex, FVector Location) 参数

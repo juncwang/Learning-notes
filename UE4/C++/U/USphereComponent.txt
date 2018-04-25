@@ -1,0 +1,12 @@
+头文件 Runtime/Engine/Classes/Components/SphereComponent.h
+
+方法
+OnComponentBeginOverlap.AddUniqueDynamic(this, &AActor::func); 配置绑定穿入碰撞方法，当被碰撞时启用
+方法参数
+UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult
+
+OnComponentHit.AddDynamic(this, &AActor::func);配置绑定打击碰撞方法，当被碰撞时启用
+方法参数
+UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit
+
+定义方法时，必须在方法上加入 UFUNCTION

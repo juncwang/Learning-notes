@@ -1,0 +1,7 @@
+静态方法:
+
+Physics.OverlapCapsule("v胶囊提第一个点",“v胶囊提第二个点”,"f点的半径大小","iLayerMask.GetMask("s层名字"))"返回一个Collider数组
+Physics.Raycast(v起始点, v方向, out RaycastHit对象, f长度, 作用层LayerMask对象)使用RaycastHit对象发射射线
+
+静态变量
+Physics.gravity 重力变量 返回一个vector3,Physics.gravity.y为y轴方向重力

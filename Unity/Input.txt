@@ -1,0 +1,7 @@
+静态方法：
+
+bool Input.GetKey("s按键")检测 按键 是否被按住
+bool Input.GetKeyDown("s按键")检测 按键 是否被按下
+bool Input.GetKeyUp("s按键") 检测 按键 是否被按下后抬起
+bool Input.GetAxis(sKeyName) 根据按键在系统内的名称获取按键的操作
+bool Input.GetKeyDown(KeyCode.Space) 获取按键按下事件

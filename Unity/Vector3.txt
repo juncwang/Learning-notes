@@ -1,0 +1,13 @@
+静态变量：
+Vector3.magnitude 向量的长度
+Vector3.up 对象上方向
+Vector3.right 对象右方向
+Vector3.forward 对象前方向
+Vector3.zero 对象左右坐标为0
+Vector3.normalized 返回三维向量的标准向量
+
+静态方法:
+Vector3.Slerp("f当前位置", "f目标位置", "f时间")使三维向量更具一定 时间 从 当前位置 变换到 目标位置，并返回一个根据时间计算出来的三维向量值
+Vector3.MoveTowards(vFormPos, vTargetPost, fTime); 按fTime时间比率将对象位置步步改为目标位置
+Vector3.Project(targetTransform.position - startTransform.position,(endTransform.position - startTransform.position).normalized) 投影一个向量到另一个向量
+Vector3.Slerp(from : Vector3, to : Vector3, t : float) 通过t数值在from和to之间插值。返回的向量的长度将被插值到from到to的长度之间

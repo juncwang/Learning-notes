@@ -1,0 +1,14 @@
+使用规则
+private void OnDrawGizmos()
+{
+必须在此方法内进行使用
+}
+
+变量
+Gizmos.color 绘制出线段的颜色
+
+静态方法
+Gizmos.DrawIcon(vPosition, sName, bool); 绘制图标
+图片必须放在 assets\Gizmos文件下,图片名称为sName
+Gizmos.DrawLine(vStartPos, vEndPos); 绘制线段
+Gizmos.DrawWireSphere(vPosition, fLength); 绘制圆形

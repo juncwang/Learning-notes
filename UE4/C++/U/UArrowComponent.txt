@@ -1,0 +1,7 @@
+头文件 Runtime/Engine/Classes/Components/ArrowComponent.h
+
+方法
+FTransfrom GetComponentToWorld()获取组件的Transfrom
+FQuat GetComponentQuat() 获取组件的四位旋转值
+FRotator GetComponentRotation() 返回组件的旋转值
+void SetWorldRotation() 设置组件的世界旋转值

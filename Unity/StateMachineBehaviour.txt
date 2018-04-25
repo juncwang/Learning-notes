@@ -1,0 +1,7 @@
+重写方法：
+override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex{}
+开始状态时调用的函数
+override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {}
+开始状态后每帧调用的函数
+override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {}
+结束状态时调用的函数

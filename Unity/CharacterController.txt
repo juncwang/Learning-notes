@@ -1,0 +1,3 @@
+方法
+CharacterController.SimpleMove(vSpeed) 简单移动采样，设置玩家移动多少位置，自带重力
+CharacterController.Move(vSpeed) 移动采样，设置玩家移动多少位置，不带重力

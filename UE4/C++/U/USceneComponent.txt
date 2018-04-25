@@ -1,0 +1,9 @@
+方法
+void AttachToComponent(parent, FAttachmentTransformRules::type) 设定组件的父级为 parent,依附的类型为 type
+
+FRotator GetComponentRotation() 返回组件的旋转值
+void SetWorldRotation() 设置组件的世界旋转值
+FTransfrom GetComponentToWorld()获取组件的Transfrom
+FQuat GetComponentQuat() 获取组件的四位旋转值
+FRotator GetComponentRotation() 返回组件的旋转值
+void SetWorldRotation() 设置组件的世界旋转值

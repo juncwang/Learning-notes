@@ -1,0 +1,23 @@
+UFUNCTION( 参数 1，参数 2， 参数 3，参数 4)
+
+参数 1：
+BlueprintCallable 把函数设置为蓝图可调用函数
+BlueprintImplementableEvent 把函数设置为蓝图事件，该函数不需要在CPP内进行实现，需在C++内启动函数
+BlueprintNativeEvent 把函数设置为蓝图事件，并是实现里函数名后加入 _Implementation 以便系统找到并使用。
+如果C++内启动此事件函数，而蓝图没有进行调用，将执行 函数名后加入 _Implementation 的方法
+
+参数 2：
+BlueprintPure 把函数设置为纯函数，此便签的函数必须有返回值（可不写第一个参数）
+
+参数 3：
+Category = "Group"  设置该函数的分组
+
+参数 4：
+meta = (参数 1,参数 2, ... ... )
+meta = (NativeBreakFunc) 该函数设置成 break 函数形式
+meta = (NativeMakeFunc) 该函数设置成 make 函数形式
+meta = (DisplayName = "DisplayName")  该函数名称设置成DisplayName
+meta = (CompactNodeTitle = "PureName") 该函数蓝图标签上显示设置成PureName
+meta = (Keywords = "Pure") 该函数蓝图搜索关键字设置成Pure
+meta = (CommutativeAssociativeBinaryOperator = "true") 该函数蓝图内添加针脚，可以增加输入的值
+meta = (X = "1"，Y = "1"，Z = "1") 该函数初始参数设置值，必须与参数明对应

@@ -1,0 +1,18 @@
+获取自身的方法
+UWorld* world = GetWorld();
+
+方法
+GetAuthGameMode(); 获取场景内的GameModeBase 
+GetGameState();获取场景内的GameStateBase 
+GetFirstPlayerController();获取场景内的PlayerController 
+GetFirstPlayerController()->GetPawn();获取场景内的Pawn 
+GetFirstPlayerController()->PlayerState;获取场景内的PlayerState 
+GetFirstPlayerController()->GetHUD();获取场景内的HUD 
+GetGameInstance());获取场景内的GameInstance 
+
+GetDeltaSeconds() 获取游戏内，每帧所消耗的时间
+GetRealTimeSeconds() 获取游戏内，每帧所消耗的时间
+
+AActor* Actor = UWorld->SpawnActor<AActor>(TSubclassOf<AActor>, FVector::ZeroVector, FRotator::ZeroRotator);发射一个AActor，并把控制权交给actor
+
+LineTraceSingleByChannel(Hit, actorLocation, targetLocation, ECC_Visibility, QueryParams)); 发射一条射线

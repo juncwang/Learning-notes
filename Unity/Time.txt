@@ -1,0 +1,6 @@
+静态变量：
+
+Time.DeltaTime
+Update方法两次中间的间隔时间
+Time.fixedDeltaTime
+FixedUpdate方法两次中间的间隔时间

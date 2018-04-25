@@ -1,0 +1,26 @@
+头文件  ProceduralMeshComponent.h
+
+使用前需要在
+ MyProject.Build.cs 内加入
+PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "ProceduralMeshComponent" });
+
+MyProject.uproject 内加入
+"AdditionalDependencies": [..., ..., "ProceduralMeshComponent"]
+
+创建方法
+// 在这一个中，你可以发送FLinearColor代替顶点颜色的FColor
+
+void CreateMeshSection_LinearColor(int32 SectionIndex, const TArray<FVector>& Vertices, const TArray<int32>& Triangles, const TArray<FVector>& Normals, const TArray<FVector2D>& UV0, const TArray<FLinearColor>& VertexColors, const TArray<FProcMeshTangent>& Tangents, bool bCreateCollision)
+ 
+
+// 更新此程序网格组件的一部分。这比CreateMeshSection快，但不允许您更改拓扑。碰撞信息也被更新。
+
+void UpdateMeshSection_LinearColor(int32 SectionIndex, const TArray<FVector>& Vertices, const TArray<FVector>& Normals, const TArray<FVector2D>& UV0, const TArray<FLinearColor>& VertexColors, const TArray<FProcMeshTangent>& Tangents);
+
+启用碰撞
+bool ContainsPhysicsTriMeshData(true);
+
+
+变量
+启用多线程功能
+bUseAsyncCooking = true;

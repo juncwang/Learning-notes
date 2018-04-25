@@ -1,0 +1,13 @@
+头文件 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
+
+方法
+UGameplayStatics::PlaySoundAtLocation(GetWorld(), CoinSound, GetActorLocation());
+播放音乐
+
+UGameplayStatics::GetAllActorsOfClass(this, APointLight::StaticClass(), PointLightsArray);
+获取场景内的物体
+
+//--------------------------------------------------------------------------------------------//
+UGameplayStatics::GetPlayerController(this,0);
+获取 PlayerController
+//--------------------------------------------------------------------------------------------//
