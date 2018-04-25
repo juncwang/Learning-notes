@@ -1,0 +1,10 @@
+可重新方法
+
+BeginPlay 第一次加载该类时调用
+virtual void BeginPlay() override;
+
+Tick 每一帧都会调用
+virtual void Tick(float DeltaTime) override;
+
+静态方法
+APlayerState APlayerState::StaticClass() 返回自身的静态类

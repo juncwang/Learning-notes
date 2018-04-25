@@ -1,0 +1,21 @@
+可重新方法
+
+BeginPlay 第一次加载该类时调用
+virtual void BeginPlay() override;
+
+Tick 每一帧都会调用
+virtual void Tick(float DeltaTime) override;
+
+SetupPlayerInputComponent 获取控制器信息
+virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+方法
+UCapsuleComponent GetCapsuleComponent()；获取碰撞胶囊体
+UCharacterMovementComponent GetCharacterMovement()；获取该类的移动组件
+
+变量
+GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f); 设置碰撞胶囊体大小
+GetCharacterMovement()->bOrientRotationToMovement = true;  角色是否在输入方向上移动
+GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f); 角色的旋转速率
+GetCharacterMovement()->JumpZVelocity = 600.f; 角色跳跃速度
+GetCharacterMovement()->AirControl = 0.2f; 角色的空气控制

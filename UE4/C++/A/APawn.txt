@@ -1,0 +1,35 @@
+可重新方法
+
+BeginPlay 第一次加载该类时调用
+virtual void BeginPlay() override;
+
+Tick 每一帧都会调用
+virtual void Tick(float DeltaTime) override;
+
+SetupPlayerInputComponent 获取控制器信息
+virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+静态方法
+APawn APawn::StaticClass() 返回自身的静态类
+
+方法
+AddControllerYawInput(float val);  增加控制器在YAW 轴上的旋转
+AddControllerPitchInput(float val); 增加控制器在PITCH 轴上的旋转
+AddControllerRollInput(float val); 增加控制器在Roll 轴上的旋转
+AddMovementInput(vector,val); 增加角色移动以向量 vector 方向，val 速度
+AddActorWorldOffset(Location);增加pawn的世界坐标位置偏移量
+Jump(); 开始跳跃的方法
+StopJumping(); 停止跳跃的方法
+
+AController GetController()； 获取控制器
+
+GetViewportSize(Size_X, Size_X); 获取荧屏尺寸，并传值给 Size_X,Size_Y；
+
+变量
+bUseControllerRotationPitch = false; 是否用控制器控制角色的 X 轴
+bUseControllerRotationYaw = false; 是否用控制器控制角色的 Y 轴
+bUseControllerRotationRoll = false; 是否用控制器控制角色的 Z 轴
+AutoPossessPlayer = EAutoReceiveInput::Player0; 设置控制几号玩家
+
+包含的类
+Controller 控制器类

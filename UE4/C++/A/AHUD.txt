@@ -1,0 +1,20 @@
+可重新方法
+
+BeginPlay 第一次加载该类时调用
+virtual void BeginPlay() override;
+
+Tick 每一帧都会调用
+virtual void Tick(float DeltaTime) override;
+
+绘制HUD方法
+virtual void DrawHUD() override;
+
+静态方法
+AHUD AHUD::StaticClass() 返回自身的静态类
+
+
+方法
+GetOwningPlayerController() 获取PlayerController
+
+DrawRect(FLinearColor(0.f, 0.f, 1.f, .15f), InitialPoint.X, InitialPoint.Y, CurrentPoint.X - InitialPoint.X, CurrentPoint.Y - InitialPoint.Y);绘制矩形
+GetActorsInSelectionRectangle<AActor>(InitialPoint, CurrentPoint, ArrayActors, false, false);获取矩形框内的Actor数组

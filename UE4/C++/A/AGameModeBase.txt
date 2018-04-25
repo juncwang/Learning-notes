@@ -1,0 +1,14 @@
+可重新方法
+
+BeginPlay 第一次加载该类时调用
+virtual void BeginPlay() override;
+
+Tick 每一帧都会调用
+virtual void Tick(float DeltaTime) override;
+
+变量
+DefaultPawnClass = APawn::StaticClass(); 获取静态pawn
+PlayerControllerClass = APlayerController::StaticClass();获取静态APlayerController
+HUDClass = AHUD::StaticClass();获取静态AHUD
+GameStateClass = AGameStateBase::StaticClass();获取静态AGameStateBase
+PlayerStateClass = APlayerState::StaticClass();获取静态APlayerState
