@@ -1,0 +1,33 @@
+/////////////////////////////////配置//////////////////////////////////////
+Git config
+
+配置用户名
+git config --global user.name '用户名'
+
+配置用户名下邮箱地址
+git config --global user.email '邮箱地址'
+
+查看配置文件
+git config -l
+
+
+/////////////////////////////////项目操作/////////////////////////////////
+
+
+在当前路径下做git项目
+git init
+
+与远程端进行连接
+git remote add origin 远程连接地址
+
+查看状态
+git status
+
+添加文件操作
+git add *
+
+添加文件注释操作
+git commit -m 'first_commit'
+
+推送文件到远端操作
+git push -u origin master
