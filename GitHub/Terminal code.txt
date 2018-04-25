@@ -31,3 +31,6 @@ git commit -m 'first_commit'
 
 推送文件到远端操作
 git push -u origin master
+
+从远端拉取文件到本地
+git pull -u origin master
