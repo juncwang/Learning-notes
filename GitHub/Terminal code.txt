@@ -34,3 +34,13 @@ git push -u origin master
 
 从远端拉取文件到本地
 git pull -u origin master
+
+
+/////////////////////////////////Mac电脑配置/////////////////////////////////
+
+1. 打开终端运行 $ cd ~/.ssh
+2. 生成SSH KEY $ ssh-keygen -t rsa -C juncwang@live.com
+3. 连续按下回车键进行生成
+4. 打开终端运行 $ open ~/.ssh
+5. 查看 id_rsa.pub 的内容并进行复制
+6. 登陆 GitHub 进入个人设置内添加 SSH KEY
