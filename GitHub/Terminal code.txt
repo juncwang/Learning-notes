@@ -1,14 +1,20 @@
-/////////////////////////////////配置//////////////////////////////////////
+/////////////////////////////////Git 配置//////////////////////////////////////
 Git config
 
 配置用户名
 git config --global user.name '用户名'
+取消配置
+git config --global --unset user.name
 
 配置用户名下邮箱地址
 git config --global user.email '邮箱地址'
+取消配置
+git config --global --unset user.email
 
 查看配置文件
 git config -l
+
+
 
 
 /////////////////////////////////项目操作/////////////////////////////////
@@ -35,12 +41,28 @@ git push -u origin master
 从远端拉取文件到本地
 git pull -u origin master
 
+克隆远程文件
+git clone 远程地址
 
 /////////////////////////////////Mac电脑配置/////////////////////////////////
+
+先进行git 配置操作后
 
 1. 打开终端运行 $ cd ~/.ssh
 2. 生成SSH KEY $ ssh-keygen -t rsa -C juncwang@live.com
 3. 连续按下回车键进行生成
 4. 打开终端运行 $ open ~/.ssh
+5. 查看 id_rsa.pub 的内容并进行复制
+6. 登陆 GitHub 进入个人设置内添加 SSH KEY
+
+
+/////////////////////////////////Mac电脑配置/////////////////////////////////
+
+先进行git 配置操作后
+
+1. 点击桌面鼠标右键 运行 Git Bash Here
+2. 生成SSH KEY $ ssh-keygen -t rsa -C juncwang@live.com
+3. 连续按下回车键进行生成
+4. 生成后会在 C:\Users\用户名.ssh
 5. 查看 id_rsa.pub 的内容并进行复制
 6. 登陆 GitHub 进入个人设置内添加 SSH KEY
