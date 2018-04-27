@@ -1,12 +1,21 @@
+头文件
 include 		导入头文件 #
 
+变量
 int 			整形变量
 float 			浮点型变量
 double 			双浮点型变量
 
+逻辑
+if else			选择
+while			循环
+for			循环
+
+类
 class			类
 
 public			公有成员
 private			私有成员
 
+方法
 return 			返回

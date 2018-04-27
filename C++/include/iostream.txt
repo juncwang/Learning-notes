@@ -1,3 +1,4 @@
 std::cout	C++输出	<<
+std::cerr	C++错误提示 << 与std::cout使用方法一样
 std::in		C++输入	>>
 std::endl	C++换行
