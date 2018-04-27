@@ -2,6 +2,9 @@
 include 		导入头文件 #
 
 变量
+signed			有符号标识
+unsigned		无符号标识
+void			无类型
 bool			布尔型			-
 char			字符型			8位
 wchar_t			宽字符型		16位
@@ -25,3 +28,13 @@ private			私有成员
 
 方法
 return 			返回
+
+变量
+true			真
+false			假
+
+转移字符
+\n			换行
+\t			缩进
+%d			十进制
+%f			浮点显示
