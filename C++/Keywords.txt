@@ -1,0 +1,12 @@
+include 		导入头文件 #
+
+int 			整形变量
+float 			浮点型变量
+double 			双浮点型变量
+
+class			类
+
+public			公有成员
+private			私有成员
+
+return 			返回
