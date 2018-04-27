@@ -1,1 +1,0 @@
-int sizeof(type) 检查类型的内存大小并返回 int 数

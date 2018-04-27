@@ -2,9 +2,15 @@
 include 		导入头文件 #
 
 变量
-int 			整形变量
-float 			浮点型变量
-double 			双浮点型变量
+bool			布尔型			-
+char			字符型			8位
+wchar_t			宽字符型		16位
+short			短整型			16位
+int 			整型变量		16位
+long			长整形			32位
+float 			单精度浮点型变量	6位有效数字
+double 			双进度浮点型变量	10位有效数字
+long double		扩展双精度浮点型	10位有效数字
 
 逻辑
 if else			选择
