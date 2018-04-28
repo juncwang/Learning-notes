@@ -3,4 +3,5 @@ FRotator GetControlRotation() 获取控制器的旋转
 void SetControlRotation(FRotator ) 设置控制器旋转
 
 变量
+PrimaryActorTick.bCanEverTick = true; 打开每帧调用函数 Tick()
 PlayState 自身的PlayerState

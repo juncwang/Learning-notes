@@ -8,3 +8,6 @@ virtual void Tick(float DeltaTime) override;
 
 静态方法
 AGameStateBase AGameStateBase::StaticClass() 返回自身的静态类
+
+变量
+PrimaryActorTick.bCanEverTick = true; 打开每帧调用函数 Tick()

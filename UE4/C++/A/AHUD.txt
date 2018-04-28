@@ -18,3 +18,6 @@ GetOwningPlayerController() 获取PlayerController
 
 DrawRect(FLinearColor(0.f, 0.f, 1.f, .15f), InitialPoint.X, InitialPoint.Y, CurrentPoint.X - InitialPoint.X, CurrentPoint.Y - InitialPoint.Y);绘制矩形
 GetActorsInSelectionRectangle<AActor>(InitialPoint, CurrentPoint, ArrayActors, false, false);获取矩形框内的Actor数组
+
+变量
+PrimaryActorTick.bCanEverTick = true; 打开每帧调用函数 Tick()

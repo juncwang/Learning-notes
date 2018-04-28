@@ -7,6 +7,8 @@ Tick 每一帧都会调用
 virtual void Tick(float DeltaTime) override;
 
 变量
+PrimaryActorTick.bCanEverTick = true; 打开每帧调用函数 Tick()
+
 DefaultPawnClass = APawn::StaticClass(); 获取静态pawn
 PlayerControllerClass = APlayerController::StaticClass();获取静态APlayerController
 HUDClass = AHUD::StaticClass();获取静态AHUD

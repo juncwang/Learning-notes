@@ -15,10 +15,11 @@ virtual void SetupPlayerInputComponent() override;
 APlayerController APlayerController::StaticClass() 返回自身的静态类
 
 方法
-AActor GetviewTarGet() 获取当前相机所属于的演员
+AActor GetViewTarget() 获取当前相机所属于的演员
 void SetViewTargetWithBlend(Camera , fSmoothBlendTime);将相机切换到 Camera， 切换过度时间 fSmoothBlendTime
 
 GetMousePosition(PosX, PosY) 获取当前鼠标的X 轴 与Y轴，PosX，PosY 作为传入接受X,Y轴参数的值
+GetViewportSize(Size_x, Size_y); 获取屏幕尺寸并把值传给Size_x, Size_y
 
 GetHUD()获取HUD
 GetPawn()获取Pawn
@@ -26,6 +27,8 @@ GetPawn()获取Pawn
 GetHitResultUnderCursor(ECollisionChannel::ECC_Visibility, false, Hit);发射射线
 
 变量
+PrimaryActorTick.bCanEverTick = true; 打开每帧调用函数 Tick()
+
 bShowMouseCursor = true; 是否显示鼠标
 DefaultMouseCursor = EMouseCursor::Crosshairs;  默认鼠标光标
 PlayState 自身的PlayerState

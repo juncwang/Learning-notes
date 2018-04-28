@@ -26,6 +26,8 @@ AController GetController()； 获取控制器
 GetViewportSize(Size_X, Size_X); 获取荧屏尺寸，并传值给 Size_X,Size_Y；
 
 变量
+PrimaryActorTick.bCanEverTick = true; 打开每帧调用函数 Tick()
+
 bUseControllerRotationPitch = false; 是否用控制器控制角色的 X 轴
 bUseControllerRotationYaw = false; 是否用控制器控制角色的 Y 轴
 bUseControllerRotationRoll = false; 是否用控制器控制角色的 Z 轴

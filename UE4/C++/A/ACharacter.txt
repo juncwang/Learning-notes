@@ -14,6 +14,8 @@ UCapsuleComponent GetCapsuleComponent()；获取碰撞胶囊体
 UCharacterMovementComponent GetCharacterMovement()；获取该类的移动组件
 
 变量
+PrimaryActorTick.bCanEverTick = true; 打开每帧调用函数 Tick()
+
 GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f); 设置碰撞胶囊体大小
 GetCharacterMovement()->bOrientRotationToMovement = true;  角色是否在输入方向上移动
 GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f); 角色的旋转速率
