@@ -1,4 +1,5 @@
 创建此类时编辑器会报错，必须编译后重写下面几个接口方法才能编译通过
+创建后需引用头文件 #include "BehaviorTree/BTService.h"
 
 /** Notify called after GameplayTask finishes initialization (not active yet) */
 	
@@ -20,3 +21,8 @@ virtual void OnGameplayTaskDeactivated(UGameplayTask& Task) {}
 	
 virtual void TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) override;
 该方法为每帧调用一次
+
+/** initialize any asset related data */
+	
+virtual void InitializeFromAsset(UBehaviorTree& Asset);
+初始化资产相关的数据

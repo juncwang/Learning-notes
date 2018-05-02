@@ -1,0 +1,8 @@
+头文件 BehaviorTree/BlackboardComponent.h
+
+方法
+GetOwner()			获取所有者
+GetBlackboardComponent		获取BC的组件
+
+SetValueAsObject(BlackBoardKey_Target.SelectedKeyName, TargetTower)		设置组件对象属性
+SetValueAsFloat(BlackBoardKey_Distance.SelectedKeyName, TMDistance.Size());	设置组件浮点属性
