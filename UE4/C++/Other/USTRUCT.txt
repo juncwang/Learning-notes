@@ -7,7 +7,11 @@ struct FMouseSettingConfiguration  	//构造名称必须以 F 开头
 	float MouseSpeed;
 };
 
-
 使用方式
 UPROPERTY(EditDefaultsOnly)
 FMouseSettingConfiguration mouseSettingConfiguration;
+
+
+
+结构体
+FBlackboardKeySelector		接收BlackboardData参数
