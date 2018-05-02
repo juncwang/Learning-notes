@@ -1,7 +1,18 @@
 头文件 Runtime/Engine/Classes/Components/BoxComponent.h
 
 方法
-OnComponentBeginOverlap.AddUniqueDynamic(this, &AActor::func); 配置绑定方法，当被碰撞时启用方法参数
-UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult
+OnComponentBeginOverlap.AddUniqueDynamic(this, &AActor::func); 	配置绑定方法，当被碰撞时启用方法参数，调用方法必须接收一下参数
+UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult	
+
+OnComponentEndOverlap.AddUniqueDynamic(this,  &AActor::func); 	配置绑定方法，当离开碰撞时启用方法参数，调用方法必须接收一下参数
+UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex
+
+SetCollisionEnabled(ECollisionEnabled::type); 						设置碰撞属性
+SetCollisionResponseToAllChannels(ECollisionResponse::type); 				设置所有的碰撞通道的碰撞类型
+SetCollisionResponseToChannel(ECollisionChannel::type, ECollisionResponse::type); 	设置单个通道的碰撞类型
+
+参数
+AddUniqueDynamic	只发生一次
+AddDynamic		发生多次
 
 定义方法时，必须在方法上加入 UFUNCTION

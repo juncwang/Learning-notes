@@ -9,7 +9,7 @@ bool			布尔型			-
 char			字符型			8位
 wchar_t			宽字符型		16位
 short			短整型			16位
-int 			整型变量		16位
+int 			整型变量		32位
 long			长整形			32位
 float 			单精度浮点型变量	6位有效数字
 double 			双进度浮点型变量	10位有效数字
@@ -33,8 +33,3 @@ return 			返回
 true			真
 false			假
 
-转移字符
-\n			换行
-\t			缩进
-%d			十进制
-%f			浮点显示
