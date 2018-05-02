@@ -15,6 +15,9 @@ float 			单精度浮点型变量	6位有效数字
 double 			双进度浮点型变量	10位有效数字
 long double		扩展双精度浮点型	10位有效数字
 
+extern			声明变量 该变量在其他类里进行定义
+const			定义常量,必须初始化
+
 逻辑
 if else			选择
 while			循环

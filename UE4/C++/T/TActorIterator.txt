@@ -1,0 +1,4 @@
+for (TActorIterator<AActor>It(GetWorld(),TSubclassOf<AActor>);It;++It)
+{
+
+}

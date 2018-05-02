@@ -1,0 +1,22 @@
+创建此类时编辑器会报错，必须编译后重写下面几个接口方法才能编译通过
+
+/** Notify called after GameplayTask finishes initialization (not active yet) */
+	
+virtual void OnGameplayTaskInitialized(UGameplayTask& Task) {}
+
+	
+/** Notify called after GameplayTask changes state to Active (initial activation or resuming) */
+	
+virtual void OnGameplayTaskActivated(UGameplayTask& Task) {}
+
+	
+/** Notify called after GameplayTask changes state from Active (finishing or pausing) */
+	
+virtual void OnGameplayTaskDeactivated(UGameplayTask& Task) {}
+
+可重写的方法
+/** update next tick interval
+	* this function should be considered as const (don't modify state of object) if node is not instanced! */
+	
+virtual void TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) override;
+该方法为每帧调用一次

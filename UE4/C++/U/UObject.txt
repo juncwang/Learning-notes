@@ -1,2 +1,6 @@
+
+静态方法
+StaticClass() 返回静态类
+
 方法
 Component CreateDefaultSubobject< UComponent >(TEXT(" name ")) 创建一个组件UComponent，并且名字为 name
