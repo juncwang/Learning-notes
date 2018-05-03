@@ -26,3 +26,7 @@ virtual void TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, floa
 	
 virtual void InitializeFromAsset(UBehaviorTree& Asset);
 初始化资产相关的数据
+
+
+可定义结构体
+struct FBlackboardKeySelector		接收BlackboardData参数

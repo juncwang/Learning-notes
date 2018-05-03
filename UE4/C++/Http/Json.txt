@@ -14,6 +14,6 @@ jsonDoc.Parse(MessageBody);
 jsonDoc["dataName"]
 
 转换数据方法
-GetFString()
-GetInt()
-GetBool()
+.GetFString()
+.GetInt()
+.GetBool()
