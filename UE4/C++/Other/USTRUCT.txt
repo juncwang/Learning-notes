@@ -14,4 +14,4 @@ FMouseSettingConfiguration mouseSettingConfiguration;
 
 
 结构体
-FBlackboardKeySelector		接收BlackboardData参数
+struct FBlackboardKeySelector		接收BlackboardData参数
