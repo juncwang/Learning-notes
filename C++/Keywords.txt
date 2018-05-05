@@ -1,6 +1,9 @@
 头文件
 include 		导入头文件 #
 
+namespace		命名空间
+using			使用命名空间
+
 变量
 signed			有符号标识
 unsigned		无符号标识
@@ -15,16 +18,19 @@ float 			单精度浮点型变量	6位有效数字
 double 			双进度浮点型变量	10位有效数字
 long double		扩展双精度浮点型	10位有效数字
 
+enum			枚举类型
+struct			结构体
+class			类
+
 extern			声明变量 该变量在其他类里进行定义
 const			定义常量,必须初始化
+typedef			定义变量名，定义后可以使用变量名定义变量
 
 逻辑
 if else			选择
 while			循环
 for			循环
 
-类
-class			类
 
 public			公有成员
 private			私有成员

@@ -1,0 +1,1 @@
+std::string myString	定义字符流数据类型
