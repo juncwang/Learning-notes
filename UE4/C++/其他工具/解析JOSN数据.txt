@@ -1,0 +1,19 @@
+使用JSON时，需要现在 项目名.h 文件内加入
+#include "Tools/rapidjson/document.h"
+
+
+using namespace rapidjson;
+
+将压缩包 rapidjson 内的文件复制到项目代码文件内
+
+解析
+Document jsonDoc;
+jsonDoc.Parse(MessageBody);
+
+提取数据
+jsonDoc["dataName"]
+
+转换数据方法
+.GetFString()
+.GetInt()
+.GetBool()

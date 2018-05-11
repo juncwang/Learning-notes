@@ -13,3 +13,7 @@ PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engi
 加载方式，创建并获取 TSubclassOf<UUserWidget> T_UIMain
 并通过 UUserWidget* U_UIMain= CreateWidget<UUserWidget>(GetWorld(), T_UIMain);  获取到实例
 最后通过 U_UIMain->AddToViewport 方法添加到荧屏上
+
+
+方法
+Cast<UTextBlock>(GetWidgetFromName("控件名称")）     	通过控件名称获取控件
