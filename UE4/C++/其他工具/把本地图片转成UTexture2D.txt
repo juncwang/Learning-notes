@@ -1,3 +1,6 @@
+头文件 	#include "Runtime/ImageWrapper/Public/Interfaces/IImageWrapper.h"
+	#include "Runtime/ImageWrapper/Public/Interfaces/IImageWrapperModule.h"
+
 UTexture2D GetTexture()
 {
 	FString AbsoluteFilePath = "定义图片路径";
