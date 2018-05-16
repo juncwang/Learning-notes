@@ -44,6 +44,12 @@ git pull origin master
 克隆远程文件
 git clone 远程地址
 
+降低权限（无法克隆的时候使用）
+chmod 600 ~/.ssh/id_rsa
+
+变更分支
+git checkout 分支名称
+
 /////////////////////////////////Mac电脑配置/////////////////////////////////
 
 先进行git 配置操作后
@@ -63,5 +69,5 @@ git clone 远程地址
 1. 点击桌面鼠标右键 运行 Git Bash Here
 2. 生成SSH KEY $ ssh-keygen -t rsa -C juncwang@live.com
 3. 连续按下回车键进行生成
-4. 执行 SSH KEY $cat ~/.ssh/id_rsa.pub 查看生成内容并进行复制
+4. 执行 SSH KEY $ cat ~/.ssh/id_rsa.pub 查看生成内容并进行复制
 5. 登陆 GitHub 进入个人设置内添加 SSH KEY
