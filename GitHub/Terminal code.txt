@@ -1,4 +1,4 @@
-/////////////////////////////////Git 配置//////////////////////////////////////
+﻿/////////////////////////////////Git 配置//////////////////////////////////////
 Git config
 
 配置用户名
@@ -39,7 +39,7 @@ git commit -m 'first_commit'
 git push -u origin master
 
 从远端拉取文件到本地
-git pull -u origin master
+git pull origin master
 
 克隆远程文件
 git clone 远程地址
