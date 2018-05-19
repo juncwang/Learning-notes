@@ -1,1 +1,11 @@
-std::string myString	定义字符流数据类型
+string::size_type size				保存返回的 size 大小的类型
+
+构造函数
+std::string myString()				将 空字符串 赋给 myString
+std::string myString("字符串")			将 字符串 赋给 myString
+std::string myString(otherString)		将 otherString 内的 字符串 赋给 myString
+std::string myString(10,'字符')			将 10 个 字符 组合成 字符串 赋给 myString
+
+方法
+myString.empty()				
+myString.size()					返回字符串大小 返回类型 size_type
