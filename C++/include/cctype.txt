@@ -1,0 +1,14 @@
+方法:
+
+ispunct(myString[index])					如果 myString[index] 是一个标点符号，则返回 true
+isalnum(myString[index])					如果 myString[index] 是一个数字或字母，则返回 true
+isalpha(myString[index])					如果 myString[index] 是一个字母，则返回 true
+iscntrl(myString[index])					如果 myString[index] 是一个控制字符，则返回 true
+isdigit(myString[index])					如果 myString[index] 是一个数字，则返回 true
+islower(myString[index])					如果 myString[index] 是一个小写字母，则返回 true
+isupper(myString[index])					如果 myString[index] 是一个大写字母，则返回 true
+isspace(myString[index])					如果 myString[index] 是一个空格符号，则返回 true
+isxdigit(myString[index])					如果 myString[index] 是一个十六进制数，则返回 true
+
+tolower(myString[index])					把 myString[index] 变成小写
+tolower(myString[index])					把 myString[index] 变成大写

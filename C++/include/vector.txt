@@ -1,0 +1,14 @@
+vector<int>::size_type size							保存返回 vector 的 size 大小的类型
+
+构造函数
+
+std::vector<int> iVec								定义一个空的 vector
+std::vector<int> iVec(10)							定义一个有10个数据，都是 0
+std::vector<int> iVec(10,2)							定义一个有10个数据，都是 2
+std::vector<int> iVec(otherVector)						定义一个 vector ，初始值为 otherVector 的内容
+
+方法
+
+iVec.push_back(1)						在 vector 尾部加入一个新的数据
+
+iVec.size()							返回 vector 的数据数量

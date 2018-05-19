@@ -1,9 +1,10 @@
-string::size_type size				保存返回的 size 大小的类型
+string::size_type size				保存返回 string 的 size 大小的类型
 
 构造函数
 std::string myString()				将 空字符串 赋给 myString
 std::string myString("字符串")			将 字符串 赋给 myString
 std::string myString(otherString)		将 otherString 内的 字符串 赋给 myString
+std::string myString(10)			将 10 个 字符 空字符 赋给 myString
 std::string myString(10,'字符')			将 10 个 字符 组合成 字符串 赋给 myString
 
 方法
