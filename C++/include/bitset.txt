@@ -1,0 +1,26 @@
+
+size_z size						保存返回 bitset 的 size 大小的类型
+
+初始化
+
+std::bitset<32> bt					创建一个长度为32位2进制的 bitset 类型，所有数位都位0
+std::bitset<16> bt(0xffff)				用16进制创建一个长度为16位2进制的 bitset 类型，所有数位都位1
+std::bitset<8> bt(16)					用10进制创建一个长度为32位2进制的 bitset 类型，数值为0000 1111
+std::bitset<8> bt(str,5,4)				用字符串创建一个长度为8位2进制的 bitset 类型，从字符串尾部第5位开始4位数
+
+
+方法
+
+bt.size()						返回一个 size_t 类型，bt 有多大
+bt.any()						返回一个 bool 类型，如果 bt 内有 1 个数值是 1 返回 true
+bt.none()						返回一个 bool 类型，如果 bt 内一个 1 都没有 返回 true
+bt.count()						返回一个 size_t 类型， 值为 bt 内有多少个 1
+
+bt.set(index)						将 bt 内的第 index 位改为 1
+bt.set()						将 bt 内所有数都变为 1
+bt.reset(index)						将 bt 内的第 index 位改为 0
+bt.reset()						将 bt 内所有数都变为 0
+bt.flip(index)						将 bt 内的第 index 位反转
+bt.flip()						将 bt 内所有数都反转		
+
+bt.to_ulong()						将 bt 变成无符号长整型		
