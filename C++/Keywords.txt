@@ -42,3 +42,7 @@ return 			返回
 true			真
 false			假
 
+迭代器
+iterator		一般迭代器，可以修改数据
+const_iterator		常迭代器，不能修改数据
+例: vector<int>::iterator it = v.begin();

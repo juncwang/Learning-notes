@@ -9,6 +9,16 @@ std::vector<int> iVec(otherVector)						¶¨ÒåÒ»¸ö vector £¬³õÊ¼ÖµÎª otherVector µ
 
 ·½·¨
 
+iVec.empty()							·µ»Ø bool Èç¹ûÊÇÕæ£¬ÄÇÃ´±íÊ¾ vector Îª¿Õ
+
+iVec.erase (3)							É¾³ıÏÂ±íÎª 3 µÄÊı¾İ
+iVec.erase (0,3)						É¾³ıÏÂ±í´Ó 0 µ½ 3 µÄÊı¾İ
+
 iVec.push_back(1)						ÔÚ vector Î²²¿¼ÓÈëÒ»¸öĞÂµÄÊı¾İ
+iVec.pop_back()							ÔÚ vector Î²²¿É¾³ıÒÑ¸öÊı¾İ
 
 iVec.size()							·µ»Ø vector µÄÊı¾İÊıÁ¿
+
+µü´úÆ÷
+
+iVec.begin()							·µ»ØÒ»¸ö vector ÀàĞÍµü´úÆ÷ Iterator
