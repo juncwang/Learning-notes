@@ -46,9 +46,80 @@ void UUI_NetWindown_Air::loadImageCompleteCallback(FHttpRequestPtr Request, FHtt
 			FString url = FPaths::GameContentDir() + "Cache/NetImage" + "/" + gid + ".jpg";
 
 			// 创建目录
-			Tools::VerifyOrCreateDirectory(FPaths::GameContentDir() + "Cache/NetImage");
+			VerifyOrCreateDirectory(FPaths::GameContentDir() + "Cache/NetImage");
 			// 保存文件
-			Tools::saveDataToFile(url, tdata);
+			saveDataToFile(url, tdata);
 		}
 	}
+}
+
+bool UUI_NetWindown_Air::VerifyOrCreateDirectory(const FString& TestDir)
+{
+	TArray<FString> dirArr;
+	TestDir.ParseIntoArray(dirArr, TEXT("/"), false);
+
+
+	IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
+
+	FString tmpDir = "";
+
+	for (int32 i = 0; i < dirArr.Num(); ++i)
+
+	{
+
+		if (i == 0)
+
+		{
+
+			tmpDir += dirArr[i];
+
+		}
+
+		else
+		{
+			tmpDir = tmpDir + "/" + dirArr[i];
+
+		}
+
+
+		if (!PlatformFile.DirectoryExists(*tmpDir))
+
+		{
+
+			PlatformFile.CreateDirectory(*tmpDir);
+
+
+			if (!PlatformFile.DirectoryExists(*tmpDir))
+
+			{
+
+
+			}
+
+		}
+
+	}
+
+
+	return true;
+}
+
+void UUI_NetWindown_Air::saveDataToFile(FString filePath, TArray<uint8> tdata)
+{
+	ofstream file(*filePath, ios::binary);
+
+
+	char *cp = new char[data.Num()];
+
+	for (int32 i = 0; i < data.Num(); ++i)
+
+	{
+
+		cp[i] = data[i];
+
+	}
+
+	file.write(cp, data.Num());
+
+	file.close();
 }

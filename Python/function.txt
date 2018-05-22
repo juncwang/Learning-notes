@@ -5,6 +5,7 @@ input("打印的内容:")					//提示用户并让用户输入值，并返回
 
 print("Hello World!")					//打印字符串
 print(u"中文字符")					//中文字符时，需在前面加 u 后程序自动把字符串转为unicode
+print("Hello World!",end = "")				//输出完成后不换行,中间字符串是连接符
 
 
 转换类型
