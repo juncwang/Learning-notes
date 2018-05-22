@@ -1,0 +1,6 @@
+使用方法
+TArray<AActor*> TargetTArray;
+
+方法
+add(AActor*) 	添加数组成员
+Num()		数组成员数量

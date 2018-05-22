@@ -1,0 +1,17 @@
+USTRUCT()
+struct FMouseSettingConfiguration  	//构造名称必须以 F 开头
+{
+	GENERATED_USTRUCT_BODY()  	//添加构造的声明
+
+	UPROPERTY(EditDefaultsOnly)	
+	float MouseSpeed;
+};
+
+使用方式
+UPROPERTY(EditDefaultsOnly)
+FMouseSettingConfiguration mouseSettingConfiguration;
+
+
+
+结构体
+struct FBlackboardKeySelector		接收BlackboardData参数

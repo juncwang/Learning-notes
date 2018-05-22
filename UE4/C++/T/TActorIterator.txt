@@ -1,0 +1,16 @@
+头文件 Runtime/Engine/Public/EngineUtils.h
+
+AActor* Actor;
+for (TActorIterator<AActor>It(GetWorld());It;++It)
+	{
+		Actor = *It;
+		if (Actor)
+		{
+			Other_Actor* O_Actor = Cast<Other_Actor>(Actor);
+			if (O_Actor)
+			{
+				O_Actor ... ... 执行函数操作
+			}
+		}
+	}
+获取场景内所有的 Actor并对其进行操作

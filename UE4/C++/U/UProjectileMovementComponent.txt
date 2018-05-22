@@ -1,0 +1,11 @@
+头文件 Runtime/Engine/Classes/GameFramework/ProjectileMovementComponent.h
+
+方法
+
+参数
+ProjectileMovement->InitialSpeed = 800.f;			初始速度
+ProjectileMovement->MaxSpeed = 2000.f;				最大速度
+ProjectileMovement->bIsHomingProjectile = true;			打开移动跟随
+ProjectileMovement->bRotationFollowsVelocity = true;		打开旋转跟随
+
+ProjectileMovement->UpdatedComponent = BoxDamage;		驱动BoxDamage进行移动

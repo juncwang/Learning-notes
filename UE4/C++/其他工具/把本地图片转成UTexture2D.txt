@@ -1,0 +1,38 @@
+头文件 	#include "Runtime/ImageWrapper/Public/Interfaces/IImageWrapper.h"
+	#include "Runtime/ImageWrapper/Public/Interfaces/IImageWrapperModule.h"
+
+UTexture2D GetTexture()
+{
+	FString AbsoluteFilePath = "定义图片路径";
+	IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
+
+	//判断本地是否有文件
+	if (PlatformFile.FileExists(*AbsoluteFilePath))
+	{
+		IImageWrapperModule& ImageWrapperModule = FModuleManager::LoadModuleChecked<IImageWrapperModule>(FName("ImageWrapper"));
+
+		// 创建图片类型 JPEG 或 PNG
+		IImageWrapperPtr ImageWrapper = ImageWrapperModule.CreateImageWrapper(EImageFormat::JPEG);
+		
+		TArray<uint8> RawFileData;
+		if (FFileHelper::LoadFileToArray(RawFileData, *AbsoluteFilePath))
+		{
+			if (ImageWrapper.IsValid() && ImageWrapper->SetCompressed(RawFileData.GetData(), RawFileData.Num()))
+			{
+				const TArray<uint8>* UncompressedBGRA = NULL;
+				if (ImageWrapper->GetRaw(ERGBFormat::BGRA, 8, UncompressedBGRA))
+				{
+					UTexture2D* mytex = UTexture2D::CreateTransient(ImageWrapper->GetWidth(), ImageWrapper->GetHeight(), PF_B8G8R8A8);
+					void* TextureData = mytex->PlatformData->Mips[0].BulkData.Lock(LOCK_READ_WRITE);
+					FMemory::Memcpy(TextureData, UncompressedBGRA->GetData(), UncompressedBGRA->Num());
+					mytex->PlatformData->Mips[0].BulkData.Unlock();
+
+					mytex->UpdateResource();
+
+					return mytex;
+
+				}
+			}
+		}
+	}
+}
