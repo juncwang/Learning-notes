@@ -4,3 +4,5 @@ int sizeof(type) 		检查类型的内存大小并返回 int 数
 
 void printf("打印内容")		输出并打印内容
 
+int strlen("字符内容")		返回字符串长度
+

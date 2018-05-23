@@ -1,6 +1,6 @@
 程序
 exit()							//退出程序
-exit("字符串")							//退出程序，并打印字符串
+exit("字符串")						//退出程序，并打印字符串
 
 输入输出
 
@@ -26,4 +26,12 @@ type(变量)						//变量类型
 
 数据操作
 
-range(整数)						//返回 0 - 整数 
+range(num)						//for循环调用 返回 0 - (num-1)
+range(num1,num2)					//for循环调用 返回 num1 - (num2-1)
+range(num1,num2,num3)					//for循环调用 返回 num1 - (num2-1),每次跳num3
+
+sorted(list)						//使用list列表排序后，返回一个新的列表
+
+enumerate(list,num)					//把列表内容按元祖形式返回会来(0,list[0])，并在前面加入标号(num为标号头部,默认为0)，只能用在for循环上
+
+len(list)						//返回列表长度

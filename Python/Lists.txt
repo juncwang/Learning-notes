@@ -1,0 +1,24 @@
+定义列表
+
+list = ['wuchao','jinxing','xiaohu','sanpang','ligang']
+
+切片
+
+list[1:4]								//可以取到列表第序列1到4-1的所有
+list[1:]								//可以取到列表第序列1到后面所有
+list[1:-1]								//可以取到列表第序列1到最后倒数第二个
+list[1:-1:2]								//可以取到列表第序列1到最后倒数第二个,从左到右按步长2跳着取
+list[::-2]								//可以取到列表第序列最后到最开始,从右到左按步长2跳着取
+
+方法
+
+list.append(var)							//把 var 添加到列表最后
+list.insert(num,var)							//把 var 插入到列表 num 位置
+list.remove(var)							//在列表中删除 var 的序列 
+list.pop(num)								//在列表中删除索引 num 的值,并返回这个索引的值,不指定删除最后一个
+list.clear()								//清空列表
+list.count(var)								//返回在列表中 var 出现的次数
+list.extend(otherList)							//将 otherlist 的内容添加到 List 最后
+list.index(var)								//查找 var 在列表中的位置
+list.reverse()								//反转列表中内容的位置排序
+list.sort()								//用数学的方法进行重新排序
