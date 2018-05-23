@@ -1,0 +1,3 @@
+¶¨Òå×Öµä
+
+dic = { 'name':'wang','age':34,'sex':'male'}
