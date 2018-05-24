@@ -1,5 +1,6 @@
 定义列表
 
+var = list((1,2,3))
 list = ['wuchao','jinxing','xiaohu','sanpang','ligang']
 
 切片
@@ -12,13 +13,18 @@ list[::-2]								//可以取到列表第序列最后到最开始,从右到左按步长2跳着取
 
 方法
 
+增
 list.append(var)							//把 var 添加到列表最后
 list.insert(num,var)							//把 var 插入到列表 num 位置
+删
 list.remove(var)							//在列表中删除 var 的序列 
 list.pop(num)								//在列表中删除索引 num 的值,并返回这个索引的值,不指定删除最后一个
+查
 list.clear()								//清空列表
 list.count(var)								//返回在列表中 var 出现的次数
-list.extend(otherList)							//将 otherlist 的内容添加到 List 最后
+改
 list.index(var)								//查找 var 在列表中的位置
+list.extend(otherList)							//将 otherlist 的内容添加到 List 最后
+排序
 list.reverse()								//反转列表中内容的位置排序
 list.sort()								//用数学的方法进行重新排序

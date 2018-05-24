@@ -1,3 +1,20 @@
 定义字典
 
+dic = dict.fromkeys(['host1','host2','host3'],'test')		//创建三个 键，把没一个的值都设成 'test' ---值是列表时，修改可能出错BUG
+dic = dict((('name','alex),))
 dic = { 'name':'wang','age':34,'sex':'male'}
+
+方法
+
+增
+dic.setdefault('hobby','girl')					//如果字典内有 hobby 就不做修改返回字典内的值，如果没有就加上去返回新加入的值
+查
+dic.keys()							//返回所有的 键，可以使用 list() 方法直接转换成列表
+dic.values()							//返回所有的 值，可以使用 list() 方法直接转换成列表
+dic.items()							//返回所有的 键值，可以使用 list() 方法直接转换成列表
+改
+dic.update(otherDic)						//更新 dic 内的键值，如果有相同的键就更新值，没有相同的键就加入新的键值
+删
+dic.clear()							//清空字典
+dic.pop('key')							//通过 键 删除 键值对，并返回删除的值
+dic.popitem()							//随机删除一组键值对，并以元祖形式返回删除的键值对

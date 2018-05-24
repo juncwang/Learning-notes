@@ -1,0 +1,56 @@
+定义字符串
+
+str = "abc {name}"
+
+方法
+
+str.join([str1,str2,str3,...])						//字符串拼接，使用 str 作为字符串之间的字符串把后面的字符串参数拼接在一起，并返回一个新字符串
+str.split('st1',num)							//使用 st1 分割字符串 str,返回列表.num为分割次数,默认不写就不限制次数
+str.rsplit('st1',num)							//使用 st1 分割字符串 str,(从右往左)返回列表.num为分割次数,默认不写就不限制次数
+str.count('字符')							//找出字符在字符串中的数量
+str.capitalize()							//字符串首字母大写
+str.center(num,'字符')							//打印 num 个字符，str居中，剩下的用 '字符'代替
+str.ljust(num,'字符')							//打印 num 个字符，str居左，剩下的用 '字符'代替
+str.rjust(num,'字符')							//打印 num 个字符，str居右，剩下的用 '字符'代替
+str.encode()								//字符编码
+str.endswith('字符串')							//查看是否已 '字符串' 结尾，是返回 True 否返回 False
+str.startswith('字符串')						//查看是否已 '字符串' 开头，是返回 True 否返回 False
+str.expandtabs(tabsize=num)						//设定 str 内的 \t 由 num 个空格组成
+str.find('字符串')							//查找到 字符,并将索引值返回,没有找到返回-1
+str.rfind('字符串')							//查找到 字符,并将索引值返回,(从右往左找)没有找到返回-1
+str.index("字符串")							//查找到 字符,并将索引值返回,没有找到会报错
+str.format(name = '字符串')						//格式化输出
+str.format_map({'name':'字符串'})					//格式化输出
+
+str.isalnum()								//是否包含数字或字母的字符串 有特殊字符返回 False
+str.isdecimal()								//是否是一个10进制的数
+str.isnumeric()								//是否是一个整数
+str.isdigit()								//是否是一个整数
+str.isidentifier()							//是否是一个非法变量名
+str.islower()								//是否全都是小写
+str.isupper()								//是否全部都是大写
+str.isspace()								//是否全部都是空格
+str.istitle()								//是否每个单词首字母是大写
+str.lower()								//所有大写变小写
+str.upper()								//所有小写变大写
+str.title()								//把所有单词首字母大写
+str.swapcase()								//所有字母大写变小写，小写变大写
+str.strip()								//去掉字符串 前面与后面的空格及换行符
+str.lstrip()								//去掉字符串 前面的空格及换行符
+str.rstrip()								//去掉字符串 后面的空格及换行符
+str.replace('st1','st2')						//在 str 内使用 st2 替换 st1 的内容
+
+常用方法
+
+str.count('字符')							//找出字符在字符串中的数量
+str.center(num,'字符')							//打印 num 个字符，str居中，剩下的用 '字符'代替
+str.startswith('字符串')						//查看是否已 '字符串' 开头，是返回 True 否返回 False
+str.find('字符串')							//查找到 字符,并将索引值返回,没有找到返回-1
+str.format(name = '字符串')						//格式化输出
+str.lower()								//所有大写变小写
+str.upper()								//所有小写变大写
+str.strip()								//去掉字符串 前面与后面的空格及换行符
+str.replace('st1','st2')						//在 str 内使用 st2 替换 st1 的内容
+str.split('st1',num)							//使用 st1 分割字符串 str,返回列表.num为分割次数,默认不写就不限制次数
+
+
