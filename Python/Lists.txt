@@ -19,11 +19,11 @@ list.insert(num,var)							//把 var 插入到列表 num 位置
 删
 list.remove(var)							//在列表中删除 var 的序列 
 list.pop(num)								//在列表中删除索引 num 的值,并返回这个索引的值,不指定删除最后一个
-查
 list.clear()								//清空列表
+查
 list.count(var)								//返回在列表中 var 出现的次数
-改
 list.index(var)								//查找 var 在列表中的位置
+改
 list.extend(otherList)							//将 otherlist 的内容添加到 List 最后
 排序
 list.reverse()								//反转列表中内容的位置排序
