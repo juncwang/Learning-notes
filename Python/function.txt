@@ -8,13 +8,15 @@ input("打印的内容:")					//提示用户并让用户输入值，并返回
 
 print("Hello World!")					//打印字符串
 print(u"中文字符")					//中文字符时，需在前面加 u 后程序自动把字符串转为unicode
-print("Hello World!",end = "")				//输出完成后不换行,中间字符串是连接符
+print("Hello World!",end = "")				//输出完成后不换行,中间字符串是结尾处理符合
+print("Hello World!",end = "", flush=True)		//增加立即显示功能，打印出字符串后立即输出
 
 
 转换类型
 
-int(字符变量)						//把字符串转换成 int 类型
-str(数值变量)						//把数字转换成 str 类型
+int(str)						//把字符串转换成 int 类型
+str(num)						//把数字转换成 str 类型
+eval(str)						//把字符串转换成字典
 
 变量操作
 

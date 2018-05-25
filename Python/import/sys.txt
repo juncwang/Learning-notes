@@ -1,3 +1,6 @@
 import sys
 
 sys.getdefaultencoding()					// 返回程序使用的字符集
+
+sys.stdout.write( str )						// 在终端打印字符串并放入缓冲区
+sys.stdout.flush()						// 将缓冲区的内容打印出来
