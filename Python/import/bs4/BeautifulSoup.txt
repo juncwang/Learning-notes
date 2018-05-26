@@ -1,0 +1,22 @@
+头文件
+
+from bs4 import BeautifulSoup
+
+方法
+
+html = urlopen("http://pythonscraping.com/pages/page1.html")					// 该方法为 from urllib.request import urlopen 头文件调用
+bsObj = BeautifulSoup(html.read())								// 对 html 文件进行解析
+
+使用
+
+bsObj.html
+bsObj.html.body.h1
+bsObj.body.h1
+.....												// 使用类似值调用读取网页的值
+
+安装方法
+
+1.必须安装有 pip 或 pip3
+2.执行 pip或pip3 install BeautifulSoup4
+3.执行 python或python3 setup.py install 							//可能会报错，就算报错也可能已经安装成功
+4.在 python终端使用 from bs4 import BeautifulSoup						//如果没有报错，证明安装成功

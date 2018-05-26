@@ -1,9 +1,13 @@
+import							//引入外部包
+
 break							//终止全部循环
 continue						//终止本次循环
 True False						//真假
 and or not						//逻辑运算符
 if elif else						//判断语句
 while else						//循环语句
+for i,j in list else					//循环语句
+in							//是否在里面
 def							//函数定义
 class							//类的定义
 

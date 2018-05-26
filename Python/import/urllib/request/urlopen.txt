@@ -1,0 +1,7 @@
+头文件 
+
+from urllib.request import urlopen
+
+方法
+
+html = urlopen("http://pythonscraping.com/pages/page1.html")					//返回一个html文本

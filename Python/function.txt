@@ -1,6 +1,6 @@
 程序
 exit()							//退出程序
-exit("字符串")							//退出程序，并打印字符串
+exit("字符串")						//退出程序，并打印字符串
 
 输入输出
 
@@ -8,13 +8,15 @@ input("打印的内容:")					//提示用户并让用户输入值，并返回
 
 print("Hello World!")					//打印字符串
 print(u"中文字符")					//中文字符时，需在前面加 u 后程序自动把字符串转为unicode
-print("Hello World!",end = "")				//输出完成后不换行,中间字符串是连接符
+print("Hello World!",end = "")				//输出完成后不换行,中间字符串是结尾处理符合
+print("Hello World!",end = "", flush=True)		//增加立即显示功能，打印出字符串后立即输出
 
 
 转换类型
 
-int(字符变量)						//把字符串转换成 int 类型
-str(数值变量)						//把数字转换成 str 类型
+int(str)						//把字符串转换成 int 类型
+str(num)						//把数字转换成 str 类型
+eval(str)						//把字符串转换成字典
 
 变量操作
 
@@ -23,7 +25,21 @@ del 变量						//回收变量
 变量类型
 
 type(变量)						//变量类型
+id(变量)						//返回内存地址
 
 数据操作
 
-range(整数)						//返回 0 - 整数 
+range(num)						//for循环调用 返回 0 - (num-1)
+range(num1,num2)					//for循环调用 返回 num1 - (num2-1)
+range(num1,num2,num3)					//for循环调用 返回 num1 - (num2-1),每次跳num3
+
+sorted(list)						//使用list列表排序后，返回一个新的列表
+
+enumerate(list,num)					//把列表内容按元祖形式返回会来(0,list[0])，并在前面加入标号(num为标号头部,默认为0)，只能用在for循环上
+
+len(list)						//返回列表长度
+
+创建
+
+var = list((1,2,3))					//创建一个列表
+var = dict((('name','alex),))				//创建一个字典

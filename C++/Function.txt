@@ -4,3 +4,11 @@ int sizeof(type) 		检查类型的内存大小并返回 int 数
 
 void printf("打印内容")		输出并打印内容
 
+int strlen("字符内容")		返回字符串长度
+
+int strcmp( char1, char2 )	如果str1>str2 返回 1 相等返回 0 str1<str2 返回 1
+
+void strcpy( char1, char2)	将 char2 的内容拷贝到 char1
+
+void strcat( char1, char2)	将 char2 的内容链接到 char1的尾部
+
