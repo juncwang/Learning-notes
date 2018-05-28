@@ -16,7 +16,7 @@ print("Hello World!",end = "", flush=True)		//增加立即显示功能，打印出字符串后立
 
 int(str)						//把字符串转换成 int 类型
 str(num)						//把数字转换成 str 类型
-eval(str)						//把字符串转换成字典
+eval(str)						//把字符串转换成字典,元祖,列表
 
 变量操作
 
