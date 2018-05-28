@@ -1,0 +1,7 @@
+设置时区 
+
+tzselect
+
+# 或者
+
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 

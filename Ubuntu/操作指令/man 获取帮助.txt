@@ -1,0 +1,10 @@
+获取帮助 
+
+ -h  --help  info  man 
+
+man man  # 查看man命令的手册  
+man  cd 
+man  pwd 
+man 5 passwd
+man -k passwd # 模糊查找
+man -f  passwd  # 精确查找 

@@ -1,0 +1,10 @@
+stat : 查看文件相信信息
+
+stat filename 
+#  Access time(atime):是指取用文件的时间，所谓取用，常见的操作有：使用编辑器查看文件内容，使用cat命令显示文件内容，
+使用cp命令把该文件（即来源文件）复制成其他文件，或者在这个文件上运用grep sed more less tail head 等命令，
+凡是读取而不修改文件的操作，均衡改变文件的Access time.  
+#  Modify time(mtime)：是指修改文件内容的时间，只要文件内容有改动（如使用转向输出或转向附加的方式）或存盘的操作，
+就会改变文件的Modify time,平常我们使用ls –l查看文件时，显示的时间就是Modify time  
+#  Change time(ctime):是指文件属性或文件位置改动的时间，如使用chmod，chown,mv指令集使用ln做文件的硬是连接，
+就会改变文件的Change time.

@@ -1,0 +1,7 @@
+alias : 给命令起别名
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+如果需要别名永久生效，需要保存到 .bashrc 文件

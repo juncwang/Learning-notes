@@ -1,0 +1,15 @@
+grep
+
+
+格式：
+grep [OPTIONS] PATTERN [FILE...]
+grep [OPTIONS] [-e PATTERN]  [FILE...]
+参数：
+-c    --count   #计算符合样式的列数
+-l    --file-with-matches   #列出文件内容符合指定的样式的文件名称。 
+-v   --revert-match   #显示不包含匹配文本的所有行。
+-i    --ignore-case   #忽略字符大小写的差别。
+-o   # 只显示匹配到的关键字
+-n  # 现实行号
+
+-E    使用正则表达式

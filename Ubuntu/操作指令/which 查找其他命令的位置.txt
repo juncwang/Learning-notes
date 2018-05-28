@@ -1,0 +1,3 @@
+which # 查找其他命令的位置
+
+ which ls

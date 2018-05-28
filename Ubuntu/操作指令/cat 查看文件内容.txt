@@ -1,0 +1,10 @@
+
+
+cat file1  #显示 file1的文件内容
+cat file1 file2   # 显示file1和file2的文件内容 
+cat -n file1  #  由1开始对所有输出的行数编号
+cat -s file  # 当遇到连续2行以上的空白行，只保留一行空白行
+
+cat sec.log | tee file1  # 读取sec.log ，并生成file1文件
+cat sec.log | tee - a file1   # 读取sec.log ，并追加，
+cat sec.log  |tee  file1 file2 

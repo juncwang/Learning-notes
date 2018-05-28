@@ -1,0 +1,8 @@
+创建目录： 
+
+
+# mkdir 目录名
+mkdir my_dir
+
+# - p 参数 : 递归创建目录，用于同时创建多级目录
+mkdir   a/b/c/d   

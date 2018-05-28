@@ -1,0 +1,7 @@
+查看语音环境
+
+locale -a
+
+如果有 zh_CN.utf8 则表示系统已经安装了中文locale，如果没有则需要安装相应的软件包。安装方式如下：
+
+sudo apt-get install language-pack-zh-hans language-pack-zh-hans-base

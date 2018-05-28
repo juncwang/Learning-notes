@@ -1,0 +1,5 @@
+tail  ：   查看文件尾部的内容。默认显示最后10行
+
+tail file1
+tail -n 5 file1
+tail -f file1  # 动态监控文件

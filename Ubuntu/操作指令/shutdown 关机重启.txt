@@ -1,0 +1,12 @@
+shutdown # 关机： 需要管理员权限
+
+
+shutdown -r now # 现在立即重启
+shutdown -r +5  # 三分钟后重启
+shutdown -r 12:12    #在12:12时将重启计算机
+
+shutdown -h now # 现在立即关机
+shutdown -h +5  “The System will shutdown after 3 minutes”   # 提示使用者将在三分钟后关机
+shutdown -h +5   #  5分钟后关机
+shutdown -h 12:00  # 12点钟关机
+shutdown -c   # 取消关机操作

@@ -1,0 +1,5 @@
+chown ： 更改文件的所有者和所有组
+
+chown root:root  file
+chown root   file  
+chown :root   file

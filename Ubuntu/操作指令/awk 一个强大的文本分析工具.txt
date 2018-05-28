@@ -1,0 +1,32 @@
+awk :  一个强大的文本分析工具，相对于grep的查找，sed的编辑，awk在其对数据分析并生成报告时，显得尤为强大。简单来说awk就是把文件逐行的读入，以空格为默认分隔符将每行切片，切开的部分再进行各种分析处理。
+
+
+# 命令行调用方式
+awk [-F  field-separator]  'commands'  input-file(s)
+
+#  commands 是真正awk命令，[-F域分隔符]是可选的。 input-file(s) 是待处理的文件。    在awk中，文件的每一行中，由域分隔符分开的每一项称为一个域。通常，在不指名-F域分隔符的情况下，默认的域分隔符是空格。
+
+# awk工作流程：
+# 读入有'\n'换行符分割的一条记录，然后将记录按指定的域分隔符划分域，填充域，$0则表示所有域,$1表示第一个域,$n表示第n个域。默认域分隔符是"空白键" 或 "[tab]键",所以$1表示登录用户，$3表示登录用户ip,以此类推。
+
+cat /etc/passwd |awk  -F ':'  '{print $1}'  
+cat /etc/passwd |awk  -F ':'  '{print $1"\t"$7}'
+
+awk 常用内置变量
+ARGC               命令行参数个数
+ARGV               命令行参数排列， ARGV[0] ARGV[1]
+ENVIRON            支持队列中系统环境变量的使用
+FILENAME           awk浏览的文件名
+FNR                浏览文件的记录数
+FS                 设置输入域分隔符，等价于命令行 -F选项
+NF                 浏览记录的域的个数
+NR                 已读的记录数
+OFS                输出域分隔符
+ORS                输出记录分隔符
+RS                 控制记录分隔符
+
+# 统计/etc/passwd:文件名，每行的行号，每行的列数，对应的完整行内容:
+#awk  -F ':'  '{print "filename:" FILENAME ",linenumber:" NR ",columns:" NF ",linecontent:"$0}' /etc/passwd
+
+# 使用printf替代print,可以让代码更加简洁，易读
+awk  -F ':'  '{printf("filename:%10s,linenumber:%s,columns:%s,linecontent:%s\n",FILENAME,NR,NF,$0)}' /etc/passwd

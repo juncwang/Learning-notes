@@ -1,0 +1,48 @@
+su与 sudo
+
+ su  : 切换用户，没有参数时，默认切换为root用户；
+
+su   # 切换为root
+
+## 推荐
+su -   # 切换为root 并加载user1的环境配置
+su -  user1 # 切换为user1 并加载user1的环境配置
+sudo ：   让当前用户暂时以管理员的身份root来执行命令。
+
+Ubuntu 默认没有启用root用户， 普通用户执行一些特殊的操作时，使用sudo就可以让普通用户以root用户的身份执行命令
+
+ sudo有一个配置文件： /etc/sudoers  ;  通过修改配置文件可以让指定用户使用sudo命令
+
+
+man sudoers # 查看man手册
+看下面几行： 
+# Host alias specification # 配置Host_Alias：就是主机的列表 
+Host_Alias      HOST_FLAG = hostname1, hostname2, hostname3
+# User alias specification # 配置User_Alias：就是具有sudo权限的用户的列表 
+User_Alias USER_FLAG = user1, user2, user3 
+
+# Cmnd alias specification # 配置Cmnd_Alias：就是允许执行的命令的列表，命令前加上!表示不能执行此命令.命令一定要使用绝对路径，避免其他目录的同名命令被执行，造成安全隐患 ,因此使用的时候也是使用绝对路径! 
+Cmnd_Alias      COMMAND_FLAG = command1, command2, command3 ，!command4
+
+# 配置Runas_Alias：就是用户以什么身份执行（例如root，或者oracle）的列表 
+Runas_Alias RUNAS_FLAG = operator1, operator2, operator3 
+
+
+# User privilege specification  
+# 配置权限的格式如下： 
+#  USER_FLAG HOST_FLAG=(RUNAS_FLAG) COMMAND_FLAG 
+
+root    ALL=(ALL:ALL) ALL
+如果不需要密码验证的话，则按照这样的格式来配置 
+USER_FLAG HOST_FLAG=(RUNAS_FLAG) NOPASSWD: COMMAND_FLAG 
+
+
+格式为：用户名(用户别名) 主机名(主机别名)=[(运行用户或是Runas_Alias)可选] [tag可选]  可以执行的命令(或Cmmd_Alias)  这样描述语法很生硬，不易理解，举例子
+user1  host1 = /bin/kill　# user1 可以在host1上使用命令/bin/kill
+user1  host1 = NOPASSWD: /bin/kill　# user1 可以在host1上使用命令/bin/kill 同时可以不必输入密码(这里就是使用了NOPASSWD　# 这个tag，默认是PASSWD)
+user1  host1 = NOPASSWD: /bin/kill , PASSWORD: /bin/ls　# user1 可以在host1上使用命令/bin/kill无需输入密码，但是使用/bin/ls则需要输入密码
+user1  host1 = (opterator) /bin/kill　# user1 可以在host1上使用命令/bin/kill但是必须是以operator用户运行这个命令，等价于# su -u opertor /bin/kill
+user1  host1 = (:group_name) /bin/kill　# user1 可以在host1上使用命令/bin/kill,且必须以group_name这个用户群组里面的用户来运行。
+%group_name host1 = /bin/kill　# 所有group_name里面的用户都可以在host1上执行/bin/kill(Linux中一般代表整个用户群组用# %group_name)
+再举个实际例子，我之前对sudo su这个命令不理解，为什么我可以直接就su到root用户了呢，连密码都不需要？查看了一下sudoers文件才知道原来里面有这么一行：
+xxx     ALL=NOPASSWD: /bin/su

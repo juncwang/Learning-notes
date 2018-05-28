@@ -1,0 +1,6 @@
+history ： 查看执行过的命令。
+
+history  # 显示最近1000条历史命令
+history 5   # 显示最后5条命令
+!number# number为history之后命令前的序号：执行该条命令
+!cat # 执行最后一条以cat开头的命令
