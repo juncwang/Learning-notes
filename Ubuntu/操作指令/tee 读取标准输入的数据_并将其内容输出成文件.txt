@@ -1,0 +1,5 @@
+tee ： 读取标准输入的数据，并将其内容输出成文件。
+
+cat sec.log | tee file1  # 读取sec.log ，并生成file1文件
+cat sec.log | tee - a file1   # 读取sec.log ，并追加，
+cat sec.log  |tee  file1 file2 
