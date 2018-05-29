@@ -3,3 +3,7 @@ locate # 查找文件
 locate /etc/sh   # 搜索etc目录下所有以sh开头的文件。 
 locate ~/a   # 搜索用户主目录下，所有以a开头的文件。 
 locate -i ~/a   # 搜索用户主目录下，所有以a开头的文件，并且忽略大小写。
+
+更新查找数据内容
+
+sudo updatedb
