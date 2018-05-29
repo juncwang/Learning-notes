@@ -3,4 +3,4 @@
 # 修改密码的命令
 passwd # 默认修改当前用户的密码
 
-passwd username # 修改指定用户的密码，需要管理员权限
+sudo passwd username # 修改指定用户的密码，需要管理员权限
