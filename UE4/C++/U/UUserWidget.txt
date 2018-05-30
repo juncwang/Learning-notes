@@ -14,6 +14,12 @@ PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engi
 并通过 UUserWidget* U_UIMain= CreateWidget<UUserWidget>(GetWorld(), T_UIMain);  获取到实例
 最后通过 U_UIMain->AddToViewport 方法添加到荧屏上
 
+继承方法
+void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) 时间tick
+
 
 方法
 Cast<UTextBlock>(GetWidgetFromName("控件名称")）     	通过控件名称获取控件
+
+变量
+bCanEverTick = true;					开启tick
