@@ -1,0 +1,6 @@
+from keyword import kwlist
+
+for i in kwlist:
+	print(i)
+
+打印出所有关键字

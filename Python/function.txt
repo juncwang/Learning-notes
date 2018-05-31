@@ -17,6 +17,7 @@ print("Hello World!",end = "", flush=True)		//增加立即显示功能，打印出字符串后立
 int(str)						//把字符串转换成 int 类型
 str(num)						//把数字转换成 str 类型
 eval(str)						//把字符串转换成字典,元祖,列表
+repr(str)						//返回一个规范的字符串(忽略转义字符作用),方便电脑识别，等价于 r"str"
 
 变量操作
 
@@ -42,4 +43,6 @@ len(list)						//返回列表长度
 创建
 
 var = list((1,2,3))					//创建一个列表
+var = tuple((1,2,3))					//创建一个元祖
 var = dict((('name','alex),))				//创建一个字典
+var = set('alex li')					//创建一个集合

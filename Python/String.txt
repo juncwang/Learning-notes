@@ -19,6 +19,7 @@ str.expandtabs(tabsize=num)						//设定 str 内的 \t 由 num 个空格组成
 str.find('字符串')							//查找到 字符,并将索引值返回,没有找到返回-1
 str.rfind('字符串')							//查找到 字符,并将索引值返回,(从右往左找)没有找到返回-1
 str.index("字符串")							//查找到 字符,并将索引值返回,没有找到会报错
+
 str.format(name = '字符串')						//格式化输出
 str.format_map({'name':'字符串'})					//格式化输出
 

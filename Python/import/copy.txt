@@ -1,0 +1,3 @@
+import copy
+
+copy.deepcopy(list)					// 深拷贝，返回一个完全复制到最底层的数据的新数据

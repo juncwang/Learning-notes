@@ -1,0 +1,30 @@
+set创建方法
+
+s = set("abcd")
+s = set(list)
+s = set(tuple)
+s = set(dict)
+
+frozenset创建方法
+
+s = frozenset("abcd")
+s = frozenset(list)
+s = frozenset(tuple)
+s = frozenset(dict)
+
+可以用作去重处理,set 会对内容进行去重处理
+
+只能通过for i in s:进行取值
+
+判断是否有某个元素 i in s 返回 bool
+
+
+添加
+s.add(var)					// 只能添加一个
+s.update(var)					// 可以添加一个序列
+
+删除
+s.remove(var)					// 删除指定变量
+s.pop()						// 随机删除一个变量
+s.clear()					// 清空集合
+
