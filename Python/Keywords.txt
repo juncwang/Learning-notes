@@ -15,6 +15,10 @@ not in
 with open("/tmp/foo.txt") as file：			//读取文件时使用，可解决忘记关闭文件，或发生异常的情况
 def							//函数定义
 class							//类的定义
+global							//声明全局变量
+nonlocal						//局部变量
+
+
 字符占位符
 
 %s	s = string	字符串

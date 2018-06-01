@@ -2,3 +2,6 @@
 方法
 
 time.sleep(num)							// 程序休眠 num 秒
+
+time_format = '%Y-%m-%d %X'
+time.strftime(time_format)					// 按照时间格式，返回当前时间的字符串
