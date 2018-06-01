@@ -1,0 +1,14 @@
+reduce(function, sequence, starting_value)
+				
+//返回一个值，对sequence中的item顺序迭代调用function，如果有starting_value，还可以作为初始值调用
+
+例
+
+from functools import reduce
+ 
+def add1(x,y):
+    return x + y
+ 
+print (reduce(add1, range(1, 101)))## 4950 （注：1+2+...+99）
+ 
+print (reduce(add1, range(1, 101), 20))## 4970 （注：1+2+...+99+20）

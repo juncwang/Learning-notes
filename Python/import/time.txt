@@ -1,6 +1,8 @@
 
 方法
 
+time.time()							//获取当前时间
+
 time.sleep(num)							// 程序休眠 num 秒
 
 time_format = '%Y-%m-%d %X'
