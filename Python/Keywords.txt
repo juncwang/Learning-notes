@@ -17,6 +17,7 @@ def							//函数定义
 class							//类的定义
 global							//声明全局变量
 nonlocal						//局部变量
+yield							//生成器创建方式
 
 
 字符占位符

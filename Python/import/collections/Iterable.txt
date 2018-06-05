@@ -1,0 +1,7 @@
+from collections import Iterable
+
+可迭代对象
+
+使用
+
+isinstance(i,Iterable)				// 判断i 是否是个迭代对象

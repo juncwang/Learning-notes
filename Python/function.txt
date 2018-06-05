@@ -19,6 +19,7 @@ float(var)						//转换成 float 类型
 str(var)						//转换成 str 类型
 eval(var)						//转换成 字典,元祖,列表
 repr(var)						//转换成 字符串(忽略转义字符作用),方便电脑识别，等价于 r"str"
+iter(list)						//转换成 迭代器
 
 变量操作
 
@@ -27,6 +28,7 @@ del 变量						//回收变量
 变量类型
 
 type(变量)						//变量类型
+isinstance(var,type)					//判断 var 是否是 type类型，bool
 id(变量)						//返回内存地址
 
 数据操作
@@ -40,6 +42,8 @@ sorted(list)						//使用list列表排序后，返回一个新的列表
 enumerate(list,num)					//把列表内容按元祖形式返回会来(0,list[0])，并在前面加入标号(num为标号头部,默认为0)，只能用在for循环上
 
 len(list)						//返回列表长度
+
+next(s)							//从 生成器 中取出变量,按指针方式取值
 
 判断
 all(iter)						//返回bool,检测列表，元祖，字典内部有空值返回假，反之返回真

@@ -1,0 +1,7 @@
+from collections import Iterator
+
+迭代器
+
+使用
+
+isinstance(i,Iterator)				// 判断i 是否是个迭代器

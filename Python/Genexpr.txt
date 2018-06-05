@@ -1,0 +1,26 @@
+定义方法
+
+s = (x for x in range(10))
+# 只是定义了 生成器 但并不占用内存空间
+
+def foo():
+    print('ok')
+    i= yield 1
+
+s = foo()
+# 方法内定义了 yield 后这个方法将成为生成器对象 (foo() 是一个生成器对象) ,每次执行 都只能到 yield 后就停止
+# 如果需要使用 next() 方法 需将 foo() 赋给一个变量
+
+print(s)
+# <generator object <genexpr> at 0x02DBF0F0>
+
+可以直接用 for in 进行取值
+
+
+方法
+
+s.__next__()						// 取出变量,按指针方式取值
+next(s)							// 同上，推荐使用
+
+s.send(var)						// 与next(s)一样，但是他会给 上一个 yield 的接收变量赋值 var
+							// 所以 第一次用 send 必须给值 None,第二次加入参数 会是 i = var
