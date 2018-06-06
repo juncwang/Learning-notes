@@ -4,3 +4,12 @@ sys.getdefaultencoding()					// 返回程序使用的字符集
 
 sys.stdout.write( str )						// 在终端打印字符串并放入缓冲区
 sys.stdout.flush()						// 将缓冲区的内容打印出来
+
+
+sys.argv           						命令行参数List，第一个元素是程序本身路径
+sys.exit(n)        						退出程序，正常退出时exit(0)
+sys.version        						获取Python解释程序的版本信息
+sys.maxsize        						最大的Int值
+sys.path           						返回模块的搜索路径，初始化时使用PYTHONPATH环境变量的值
+sys.path.append(sPath)						添加一个环境路径
+sys.platform       						返回操作系统平台名称

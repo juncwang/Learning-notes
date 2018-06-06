@@ -1,0 +1,7 @@
+import hashlib
+
+MD5 加密方法
+
+m = hashlib.md5()			获取 MD5 句柄、也可以用 sha1,sha128,sha256 ... ...
+m.update(str.encode('utf8'))		使用 MD5 对字符串 str 进行加密
+m.hexdigest()				获取加密后的字符串
