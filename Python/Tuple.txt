@@ -14,3 +14,7 @@ tuple[::-2]								//可以取到列表第序列最后到最开始,从右到左按步长2跳着取
 
 tuple.count(var)							//返回在列表中 var 出现的次数
 tuple.index(var)							//查找 var 在列表中的位置
+
+
+迭代器
+tuple.iter()								//返回一个迭代器对象

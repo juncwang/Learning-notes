@@ -1,0 +1,7 @@
+import random
+
+random.random()						// 生成一个 0 - 1 之间的随机浮点数
+random.randint(minNum,maxNum)				// 生成一个 minNum - maxNum 的整数，只写一位就从 0 开始
+random.choice(iter)					// 随机取出 iter 的一个字值
+random.sample(iter,Num)					// 随机从 iter 的 Num 个值
+random.randrange(minNum,maxNum)				// 生成一个 minNum - (maxNum-1) 的整数，只写一位就从 0 开始

@@ -1,6 +1,7 @@
 程序
 exit()							//退出程序
 exit("字符串")						//退出程序，并打印字符串
+help(var)						//获取帮助信息
 
 输入输出
 
@@ -14,12 +15,13 @@ print("Hello World!",end = "", flush=True)		//增加立即显示功能，打印出字符串后立
 
 转换类型
 
+chr(num)						//转换成 字符，通过ASC 码
 int(var)						//转换成 int 类型
 float(var)						//转换成 float 类型
 str(var)						//转换成 str 类型
 eval(var)						//转换成 字典,元祖,列表
 repr(var)						//转换成 字符串(忽略转义字符作用),方便电脑识别，等价于 r"str"
-iter(list)						//转换成 迭代器
+iter(var)						//转换成 迭代器
 
 变量操作
 

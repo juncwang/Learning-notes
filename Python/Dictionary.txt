@@ -18,3 +18,7 @@ dic.update(otherDic)						//¸üÐÂ dic ÄÚµÄ¼üÖµ£¬Èç¹ûÓÐÏàÍ¬µÄ¼ü¾Í¸üÐÂÖµ£¬Ã»ÓÐÏàÍ¬µ
 dic.clear()							//Çå¿Õ×Öµä
 dic.pop('key')							//Í¨¹ý ¼ü É¾³ý ¼üÖµ¶Ô£¬²¢·µ»ØÉ¾³ýµÄÖµ
 dic.popitem()							//Ëæ»úÉ¾³ýÒ»×é¼üÖµ¶Ô£¬²¢ÒÔÔª×æÐÎÊ½·µ»ØÉ¾³ýµÄ¼üÖµ¶Ô
+
+
+µü´úÆ÷
+dic.__iter__()								//·µ»ØÒ»¸öµü´úÆ÷¶ÔÏó

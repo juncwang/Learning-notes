@@ -24,3 +24,6 @@ next(s)							// 同上，推荐使用
 
 s.send(var)						// 与next(s)一样，但是他会给 上一个 yield 的接收变量赋值 var
 							// 所以 第一次用 send 必须给值 None,第二次加入参数 会是 i = var
+
+迭代器
+s.__iter__()						// 返回一个迭代器

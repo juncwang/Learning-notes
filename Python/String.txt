@@ -54,4 +54,5 @@ str.strip()								//去掉字符串 前面与后面的空格及换行符
 str.replace('st1','st2')						//在 str 内使用 st2 替换 st1 的内容
 str.split('st1',num)							//使用 st1 分割字符串 str,返回列表.num为分割次数,默认不写就不限制次数
 
-
+迭代器
+str.__iter__()								//返回一个迭代器对象

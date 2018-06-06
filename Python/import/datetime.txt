@@ -1,0 +1,4 @@
+import datetime
+
+
+datetime.datetime.now()						// 使用友好的显示格式显示当前时间

@@ -1,9 +1,30 @@
+import time
 
 方法
 
 time.time()							//获取当前时间
+time.clock()							//获取CPU执行时间
+
+time.gmtime()							//获取UTC世界标准格式化时间
+# time.struct_time(tm_year=2018, tm_mon=6, tm_mday=6, tm_hour=3, tm_min=20, tm_sec=15, tm_wday=2, tm_yday=157, tm_isdst=0)
+time.localtime()						//获取本地格式化时间
+# time.struct_time(tm_year=2018, tm_mon=6, tm_mday=6, tm_hour=11, tm_min=27, tm_sec=5, tm_wday=2, tm_yday=157, tm_isdst=0)
+
+time.ctime()							//标准格式表达当前时间
+time.mktime(time.localtime())					//通过格式化时间取时间戳
 
 time.sleep(num)							// 程序休眠 num 秒
 
 time_format = '%Y-%m-%d %X'
 time.strftime(time_format)					// 按照时间格式，返回当前时间的字符串
+time.strptime('2016-12-01 23-50-31','%Y-%m-%d %H-%M-%S')	// 把时间转成格式化时间
+
+
+
+
+格式化时间取值
+# time.struct_time(tm_year=2018, tm_mon=6, tm_mday=6, tm_hour=3, tm_min=20, tm_sec=15, tm_wday=2, tm_yday=157, tm_isdst=0)
+
+timeType.tm_year
+timeType.tm_mon
+...
