@@ -1,0 +1,44 @@
+import configparser
+
+config = configparser.ConfigParser()			// 获取文件配置的对象
+
+=================================================================================
+
+config['DEFAULT'] = {'ServerAliveInterval': '45',
+                     'compression': 'yes',
+                     'CompressionLevel': '9'}
+
+config['bitbucket.org'] = {}
+config['bitbucket.org'] = {'User': 'hg'}
+config['topsecret.server.com'] = {}
+topsecret = config['topsecret.server.com']
+topsecret['Host Port'] = '50022'
+
+==============================为配置文件添加内容================================
+
+================================================================================
+
+with open('example.ini', 'w') as configFile:
+    config.write(configFile)			// 将配置写入到文件中
+
+config.write(open('example.ini','w'))		// 同上
+
+=========================用配置文件的write方法把文件写入文本中=================
+
+===============================================================================
+
+config.read('example.ini')			// 读取配置文件
+config.sections()				// 取出配置文件内的除DEFAULT的所有块
+config.defaults()				// 取出配置文件内的DEFAULT
+config.has_section('topsecret.server.com')	// 查看是否有传入字符串的内容 True/False
+
+==============================读取,查看config内的内容=========================
+
+===============================================================================
+
+config.remove_section('topsecret.server.com')	// 删除配置文件内的内容
+config.remove_option('bitbucket.org','User')	// 删除配置文件下的键
+
+config.set('bitbucket.org','User','Wang')	// 修改值，前两个是配置层名，最后一个是值
+
+
