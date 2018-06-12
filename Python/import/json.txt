@@ -1,0 +1,6 @@
+import json
+
+data = json.dumps(dic)				将字典格式转换成 json 格式
+data = json.dump(dic,fp)			同上，并且放入文件对象进行写入操作
+dic = josn.loads(data)				将 json 格式转换成字典格式，之前需要先读取
+data = json.load(fp)				同上，并且放入文件对象进行读取操作

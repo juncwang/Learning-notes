@@ -12,6 +12,8 @@ dic.setdefault('hobby','girl')					//如果字典内有 hobby 就不做修改返回字典内的值
 dic.keys()							//返回所有的 键，可以使用 list() 方法直接转换成列表
 dic.values()							//返回所有的 值，可以使用 list() 方法直接转换成列表
 dic.items()							//返回所有的 键值，可以使用 list() 方法直接转换成列表
+dic.get('key')							//返回 键 所指的值,如果没有返回 None
+dic.get('key','value')						//返回 键 所指的值,如果没有返回 value
 改
 dic.update(otherDic)						//更新 dic 内的键值，如果有相同的键就更新值，没有相同的键就加入新的键值
 删
@@ -21,4 +23,4 @@ dic.popitem()							//随机删除一组键值对，并以元祖形式返回删除的键值对
 
 
 迭代器
-dic.__iter__()								//返回一个迭代器对象
+dic.__iter__()							//返回一个迭代器对象

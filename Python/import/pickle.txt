@@ -1,0 +1,7 @@
+import pickle
+
+data = pickle.dumps(dic)				将字典格式转换成 pickle 格式
+dic = pickle.loads(data)				将 pickle 格式转换成字典格式
+
+保存为文件时需把写入模式改为 'wb' 写入二进制文件
+读取文件时需把写入模式改为 'rb' 读取二进制文件

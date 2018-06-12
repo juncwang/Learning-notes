@@ -1,0 +1,41 @@
+import xml.etree.ElementTree as ET
+
+tree = ET.parse("test.xml")
+root = tree.getroot()
+
+for child in root:						# 遍历xml文档
+    print(child.tag, child.attrib)
+    for i in child:
+        print(i.tag, i.text)
+
+for node in root.iter('year'):					# 只遍历year 节点
+    print(node.tag, node.text)
+
+for node in root.iter('year'):					# 修改
+    new_year = int(node.text) + 1
+    node.text = str(new_year)					# 修改 text
+    node.set("updated", "yes")					# 增加属性
+
+for country in root.findall('country'):				# 删除node
+    rank = int(country.find('rank').text)
+    if rank > 50:
+        root.remove(country)
+
+tree.write('xxml')						# 写入文档
+
+
+新建一个 xml 文件
+
+new_xml = ET.Element("namelist")
+name = ET.SubElement(new_xml,"name",attrib={"enrolled":"yes"})
+age = ET.SubElement(name,"age",attrib={"checked":"no"})
+sex = ET.SubElement(name,"sex")
+sex.text = '33'
+name2 = ET.SubElement(new_xml,"name",attrib={"enrolled":"no"})
+age = ET.SubElement(name2,"age")
+age.text = '19'
+ 
+et = ET.ElementTree(new_xml) #生成文档对象
+et.write("test.xml", encoding="utf-8",xml_declaration=True)
+ 
+ET.dump(new_xml) #打印生成的格式

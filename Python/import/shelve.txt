@@ -1,0 +1,6 @@
+import shelve
+
+f = shelve.open(r'shelve.txt')			打开一个文件句柄
+f['key'] = { 'key':'value'}			放入一个信息
+data = f.get('key')['key']			取出一个信息
+f.close()					关闭文件句柄
