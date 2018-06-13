@@ -2,10 +2,24 @@
 
 class Foo				定义一个 Foo 类
 
+obj = Foo()				创建一个 Foo 类的对象
+
 def __init__(self)			构造方法
+def __del__(self)			析构方法
+def __call__(self, *args, **kwargs)	使用 obj() 时可以调用，或 Foo()()
+def __int__(self)			使用 int(obj) 时调用的方法
+def __str__(self)			使用 str(obj) 或 print(obj) 时调用的方法
+def __add__(self, other)		两个对象相加时，会执行第一个对象的该方法 还有加减乘除的对应方法
+def __getitem__(self, item)		使用 obj[var] 时调用的方法
+def __setitem__(self, key, value)	使用 obj[key] = value 方法进行赋值
+def __delitem__(self, key)		使用 del obj[key] 时调用
 
 super(Foo,self).func()			执行父类的方法
-P.func(self)				执行父类的方法
+FatherClass.func(self)			执行父类的方法
+
+类的成员
+
+obj.__dict__				用字典形式返回类对象内部的成员变量名称及值
 
 
 
@@ -20,3 +34,13 @@ P.func(self)				执行父类的方法
 
 @staticmethod				静态方法必须加的装饰器,可以不传 self
 @classmethod				类方法必须加的装饰器,必须传一个参数,如果默认参数名为 cls 那么调用时就可以不传参数,可以不传 self
+
+成员变量
+
+self.varName				公有变量
+self.__varName				私有变量
+
+成员方法
+
+def funcName(self)			公有方法
+def __funcName(self)			私有方法
