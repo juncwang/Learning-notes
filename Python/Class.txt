@@ -1,0 +1,22 @@
+类的定义
+
+class Foo				定义一个 Foo 类
+
+def __init__(self)			构造方法
+
+super(Foo,self).func()			执行父类的方法
+P.func(self)				执行父类的方法
+
+
+
+方法装饰器
+
+@property		obj.func		属性方法，调用时不要加 () 
+@func.setter		obj.func = 10		为 @property 方法赋值使用的方法，装饰器下方法名需要一致
+@func.deleter		del obj.func		为 @property 方法用 del 时使用的方法，装饰器下方法名需要一致
+另一种表达方式:		per = property(fget=func1,fset=func2,fdel=func3,doc='介绍，可有可无')
+
+
+
+@staticmethod				静态方法必须加的装饰器,可以不传 self
+@classmethod				类方法必须加的装饰器,必须传一个参数,如果默认参数名为 cls 那么调用时就可以不传参数,可以不传 self
