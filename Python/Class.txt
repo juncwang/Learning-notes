@@ -1,9 +1,42 @@
 类的定义
 
-class Foo				定义一个 Foo 类
+class Foo						定义一个 Foo 类
+Foo = type('Foo',(object,),{'func': functionT})		定义一个 Foo 类
+
+类的执行过程
+
+=======================================================================================================================================
+
+class myType(type):
+
+    def __init__(self, what, bases=None, dict=None):		第一阶段
+        super(myType,self).__init__(what, bases, dict)
+
+    def __call__(self, *args, **kwargs):			第二阶段: 1
+        obj = self.__new__(self, *args, **kwargs)		第二阶段: 2
+        self.__init__(obj)					第三阶段: 3
+
+class Foo(object, metaclass = myType):				metaclass 参数可更换自定义 type 类
+    
+    def __init__(self):
+        self.name = name
+
+    def __new__(cls, *args, **kwargs):
+        return object.__new__(cls, *args, **kwargs)
+
+obj = Foo()
+
+# 第一阶段: 解释器从上到下执行代码创建 Foo 类
+# 第二阶段: 通过 Foo 类创建 obj 对象
+
+# 所有类都是 type 对象
+# 以上为执行过程演示代码
+
+=======================================================================================================================================
 
 obj = Foo()				创建一个 Foo 类的对象
 
+def _new__(cls, *args, **kwargs)	构建类
 def __init__(self)			构造方法
 def __del__(self)			析构方法
 def __call__(self, *args, **kwargs)	使用 obj() 时可以调用，或 Foo()()
@@ -11,8 +44,12 @@ def __int__(self)			使用 int(obj) 时调用的方法
 def __str__(self)			使用 str(obj) 或 print(obj) 时调用的方法
 def __add__(self, other)		两个对象相加时，会执行第一个对象的该方法 还有加减乘除的对应方法
 def __getitem__(self, item)		使用 obj[var] 时调用的方法
+					如果以切片形式传入 返回 slice 类，该类里有 start,end,step 三个变量可以进行调用 [ start,end,step ]
 def __setitem__(self, key, value)	使用 obj[key] = value 方法进行赋值
 def __delitem__(self, key)		使用 del obj[key] 时调用
+def __iter__(self)			使用 for i in obj: 时使用的 iter,需返回一个可迭代的值 iter([1,2,3,... ...])
+
+
 
 super(Foo,self).func()			执行父类的方法
 FatherClass.func(self)			执行父类的方法
