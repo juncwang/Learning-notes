@@ -81,3 +81,69 @@ self.__varName				私有变量
 
 def funcName(self)			公有方法
 def __funcName(self)			私有方法
+
+
+=======================================================================================================================================
+
+反射
+
+python中的反射功能是由以下四个内置函数提供：
+hasattr、getattr、setattr、delattr，改四个函数分别用于对对象内部执行：
+检查是否含有某成员、获取成员、设置成员、删除成员。
+
+class Foo(object):
+ 
+    def __init__(self):
+        self.name = 'wupeiqi'
+ 
+    def func(self):
+        return 'func'
+ 
+obj = Foo()
+ 
+# #### 检查是否含有成员 ####
+hasattr(obj, 'name')
+hasattr(obj, 'func')
+ 
+# #### 获取成员 ####
+getattr(obj, 'name')
+getattr(obj, 'func')
+ 
+# #### 设置成员 ####
+setattr(obj, 'age', 18)
+setattr(obj, 'show', lambda num: num + 1)
+ 
+# #### 删除成员 ####
+delattr(obj, 'name')
+delattr(obj, 'func')
+
+=======================================================================================================================================
+
+单例模式
+
+class Foo:
+
+    __v = None
+
+    @classmethod
+    def get_instance(cls):
+        if cls.__v:
+            return cls.__v
+        else:
+            cls.__v = Foo()
+            return cls.__v
+
+obj1 = Foo.get_instance()
+print(obj1)
+obj2 = Foo.get_instance()
+print(obj2)
+obj3 = Foo.get_instance()
+print(obj3)
+
+# <__main__.Foo object at 0x02EEC3B0>
+# <__main__.Foo object at 0x02EEC3B0>
+# <__main__.Foo object at 0x02EEC3B0>
+
+用该方法创建的对象都是同一个内存地址，改其中一个都会对其他的进行更改
+
+=======================================================================================================================================

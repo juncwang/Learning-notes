@@ -68,10 +68,24 @@ def GetlPathForImagePackage(sImagePath,sMinNum,sMaxNum,sType):
         pathStr = ''.join([sImagePath, str(Num), '.', sType])
         lPath.append(pathStr)
         Num += 1
-        if pathNum > sMaxNum:
+        if Num > sMaxNum:
             return lPath
             pass
         pass
+
+
+sImagePath = r'C:/Users/JuncWang/Desktop/223ND750/DSC_8'
+sMinNum = 137
+sMaxNum = 458
+sType = 'JPG'
+
+lPath = GetlPathForImagePackage( sImagePath, sMinNum, sMaxNum, sType)
+
+sOutImagePath = r'C:/Users/JuncWang/Desktop/LiuLian.obj'
+
+
+PhotoCanProcess(lPath, sOutImagePath)
+
 
 
 
