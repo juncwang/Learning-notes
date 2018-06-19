@@ -15,10 +15,12 @@ print("Hello World!",end = "", flush=True)		//增加立即显示功能，打印出字符串后立
 
 转换类型
 
+bytes(str,'utf8')					//转换成 字节类型
 chr(num)						//转换成 字符，通过ASC 码
 int(var)						//转换成 int 类型
 float(var)						//转换成 float 类型
 str(var)						//转换成 str 类型
+str(byte,'utf8')					//转换成 str 类型,并且编码格式为 utf-8
 eval(var)						//转换成 字典,元祖,列表
 repr(var)						//转换成 字符串(忽略转义字符作用),方便电脑识别，等价于 r"str"
 iter(var)						//转换成 迭代器
