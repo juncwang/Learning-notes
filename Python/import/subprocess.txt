@@ -1,0 +1,22 @@
+import subprocess
+
+======================================================================
+
+创建一个子进程类
+obj = subprocess.Popen(str,shell=True,stdout=subprocess.PIPE)
+
+str		命令语句
+shell		开启 shell 命令
+stdout		标准输出设为子进程管道(如果需要执行 stdout.read 方法,就需要加入此参数)
+
+------------------subprocess-------------------------------------
+
+PIPE = -1
+STDOUT = -2
+DEVNULL = -3
+
+======================================================================
+
+提取执行命令后的结果
+
+obj.stdout.read()
