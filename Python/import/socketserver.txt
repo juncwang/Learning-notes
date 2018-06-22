@@ -1,1 +1,33 @@
 import socketserver
+
+
+class MyServer(socketserver.BaseRequestHandler):			必须创建一个类并继承 socketserver.BaseRequestHandler
+
+    def handle(self):							必须重写一个父类方法 def handle(self)
+									此方法内部开始执行 socket 运行逻辑
+        print ("服务端启动...")
+        while True:
+            conn = self.request						获取 sk 对象
+            print (self.client_address)					打印 客户端 地址
+            while True:
+                client_data=conn.recv(1024)
+                print (str(client_data,"utf8"))
+                print ("waiting...")
+                conn.sendall(client_data)
+            conn.close()
+
+
+方法的使用:
+
+===========================================================================================
+
+创建一个 ss 的并发服务
+server = socketserver.ThreadingTCPServer(('127.0.0.1',8091),MyServer)
+
+第一个参数是 地址 元祖类型
+第二个参数是 自定义的 brh 类
+
+
+===========================================================================================
+开启多线程服务
+server.serve_forever()

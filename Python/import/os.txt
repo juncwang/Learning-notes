@@ -8,7 +8,7 @@ os.makedirs('dirname1/dirname2')    		可生成多层递归目录
 os.removedirs('dirname1')    			若目录为空，则删除，并递归到上一级目录，如若也为空，则删除，依此类推
 os.mkdir('dirname')    				生成单级目录；相当于shell中mkdir dirname
 os.rmdir('dirname')    				删除单级空目录，若目录不为空则无法删除，报错；相当于shell中rmdir dirname
-os.listdir('dirname')    			列出指定目录下的所有文件和子目录，包括隐藏文件，并以列表方式打印
+os.listdir('dirname')    			返回指定目录下的所有文件和子目录，包括隐藏文件 list形式
 os.remove('dirname')  				删除一个文件
 os.rename("oldname","newname")  		重命名文件/目录
 os.stat('path/filename')  			获取文件/目录信息

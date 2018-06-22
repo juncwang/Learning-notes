@@ -2,6 +2,7 @@
 #date: 2018/6/5
 
 import PhotoScan
+import os
 
 # 根据 sPath 项目路径，计算出模型,贴图并保存回项目路劲中
 def CalculationModel(sPath):
@@ -57,32 +58,26 @@ def PhotoCanProcess(lPath,sOutModePath):
     chunk.buildUV(mapping=PhotoScan.GenericMapping)
     chunk.buildTexture(blending=PhotoScan.MosaicBlending, size=4096)
     chunk = doc.chunk
-    chunk.exportModel(sOutPath, True, 6, PhotoScan.ImageFormat.ImageFormatJPEG, True, True, True, True, False, True,
+    chunk.exportModel(sOutModePath, True, 6, PhotoScan.ImageFormat.ImageFormatJPEG, True, True, True, True, False, True,
                       False)
 
-# 获得图片路径列表 sImagePath(文件路径到非变值文件名) sMinNum(最小变值) sMaxNum(最大变值) sType(图片类型)
-def GetlPathForImagePackage(sImagePath,sMinNum,sMaxNum,sType):
-    Num = sMinNum
+# 获得图片路径列表 sImagePath(文件路径)
+def GetlPathForImagePackage(sImagePath):
+    filename = os.listdir(sImagePath)
     lPath = []
-    while True:
-        pathStr = ''.join([sImagePath, str(Num), '.', sType])
-        lPath.append(pathStr)
-        Num += 1
-        if Num > sMaxNum:
-            return lPath
-            pass
-        pass
+
+    for file in filename:
+        lPath.append('%s%s'%(sImagePath,file))
+
+    return lPath
 
 
-sImagePath = r'C:/Users/JuncWang/Desktop/223ND750/DSC_8'
-sMinNum = 137
-sMaxNum = 458
-sType = 'JPG'
 
-lPath = GetlPathForImagePackage( sImagePath, sMinNum, sMaxNum, sType)
+sImagePath = r'C:/Users/JuncWang/Desktop/oooo/'
 
-sOutImagePath = r'C:/Users/JuncWang/Desktop/LiuLian.obj'
+lPath = GetlPathForImagePackage( sImagePath )
 
+sOutImagePath = r'C:/Users/JuncWang/Desktop/abc.obj'
 
 PhotoCanProcess(lPath, sOutImagePath)
 
