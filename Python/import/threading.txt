@@ -53,6 +53,7 @@ class myThread(threading.Thread):		继承父类
 线程锁
 
 r = threading.Lock()			创建一个线程锁
+r = threading.RLock()			创建一个递归锁(可重用的锁)
 
 r.acquire()				开启线程锁，在代码块未结束之前，其他线程无法获取CPU资源
 r.release()				解除线程锁
