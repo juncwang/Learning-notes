@@ -11,6 +11,7 @@ FRotator GetComponentRotation() 返回组件的旋转值
 void SetWorldRotation() 设置组件的世界旋转值
 
 变量
+USpringArmComponent->bDoCollisionTest = true 有无碰撞
 USpringArmComponent->bUsePawnControlRotation = true; 设置是否用角色控制器控制旋转
 USpringArmComponent->TargetArmLength = 300.0f; 设置弹簧的长度
 USpringArmComponent->RelativeRotation = FRotator(-60.f, 0, 0); 设置相对旋转角度

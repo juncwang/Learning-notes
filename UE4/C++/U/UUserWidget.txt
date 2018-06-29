@@ -11,6 +11,7 @@ PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engi
 #include "Runtime/UMG/Public/Blueprint/UserWidget.h"
 
 加载方式，创建并获取 TSubclassOf<UUserWidget> T_UIMain
+static ConstructorHelpers::FClassFinder<UC_TestUI> C_TestUI(TEXT("/Game/UI/TestUI"));
 并通过 UUserWidget* U_UIMain= CreateWidget<UUserWidget>(GetWorld(), T_UIMain);  获取到实例
 最后通过 U_UIMain->AddToViewport 方法添加到荧屏上
 
