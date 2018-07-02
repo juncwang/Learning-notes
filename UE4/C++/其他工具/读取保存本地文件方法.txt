@@ -1,0 +1,34 @@
+头文件 Runtime\Core\Public\Misc\FFileHelper.h
+
+
+// 读取本地文件方法 -------------------------------------------------------------
+
+FFileHelper::LoadFileToString(result, *file);
+
+
+FString Tools::loadFileToJson(FString file)
+{
+	FString result;
+	FFileHelper::LoadFileToString(result, *file);
+	return result;
+}
+
+// 保存本地文件方法 -------------------------------------------------------------
+
+void Tools::saveDataToFile(FString filePath, TArray<uint8> data)
+{
+	ofstream file(*filePath, ios::binary);
+
+	char *cp = new char[data.Num()];
+	for (int32 i = 0; i < data.Num(); ++i)
+	{
+		cp[i] = data[i];
+	}
+	file.write(cp, data.Num());
+	file.close();
+}
+
+void Tools::saveVersion(const FString& filePath, const FString& data)
+{
+	FFileHelper::SaveStringToFile(data, *filePath, FFileHelper::EEncodingOptions::ForceUTF8WithoutBOM);
+}

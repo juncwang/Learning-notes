@@ -11,7 +11,7 @@ GetFirstPlayerController()->GetHUD();获取场景内的HUD
 GetGameInstance());获取场景内的GameInstance 
 
 GetDeltaSeconds() 获取游戏内，每帧所消耗的时间
-GetRealTimeSeconds() 获取游戏内，每帧所消耗的时间
+GetRealTimeSeconds() 获取游戏内，一共使用的时间
 
 AActor* Actor = UWorld->SpawnActor<AActor>(TSubclassOf<AActor>, FVector::ZeroVector, FRotator::ZeroRotator);发射一个AActor，并把控制权交给actor
 
