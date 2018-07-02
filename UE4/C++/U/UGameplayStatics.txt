@@ -11,3 +11,6 @@ UGameplayStatics::GetAllActorsOfClass(this, APointLight::StaticClass(), PointLig
 UGameplayStatics::GetPlayerController(this,0);
 ªÒ»° PlayerController
 //--------------------------------------------------------------------------------------------//
+
+UGameplayStatics::OpenLevel(GetWorld(),TEXT("/Game/Maps/OtherTestMaps"));
+«–ªªMAPS
