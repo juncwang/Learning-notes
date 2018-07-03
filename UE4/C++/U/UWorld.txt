@@ -9,6 +9,7 @@ GetFirstPlayerController()->GetPawn();获取场景内的Pawn
 GetFirstPlayerController()->PlayerState;获取场景内的PlayerState 
 GetFirstPlayerController()->GetHUD();获取场景内的HUD 
 GetGameInstance());获取场景内的GameInstance 
+GetWorld()->GetLevelScriptActor(); 获取光卡蓝图类
 
 GetDeltaSeconds() 获取游戏内，每帧所消耗的时间
 GetRealTimeSeconds() 获取游戏内，一共使用的时间
