@@ -1,0 +1,11 @@
+头文件 Runtime/UMG/Public/Components/Image.h
+
+
+//===========================================================================================================================
+
+设置里面的图片
+需要在项目的 cs 模块内加入 "Slate", "SlateCore"
+PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "UMG", "Slate", "SlateCore" });
+Img->Brush.SetResourceObject(tex2d)
+
+//===========================================================================================================================
