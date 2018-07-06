@@ -24,3 +24,4 @@ Cast<UTextBlock>(GetWidgetFromName("控件名称")）     	通过控件名称获取控件
 
 变量
 bCanEverTick = true;					开启tick
+
