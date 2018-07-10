@@ -15,3 +15,6 @@ USpringArmComponent->bDoCollisionTest = true 有无碰撞
 USpringArmComponent->bUsePawnControlRotation = true; 设置是否用角色控制器控制旋转
 USpringArmComponent->TargetArmLength = 300.0f; 设置弹簧的长度
 USpringArmComponent->RelativeRotation = FRotator(-60.f, 0, 0); 设置相对旋转角度
+USpringArmComponent->bInheritPitch = false;		设置相机不跟父及旋转
+USpringArmComponent->bInheritRoll = false;		设置相机不跟父及旋转		
+USpringArmComponent->bInheritYaw = false;		设置相机不跟父及旋转

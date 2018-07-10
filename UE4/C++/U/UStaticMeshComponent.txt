@@ -6,7 +6,12 @@ FQuat GetComponentQuat() 获取组件的四位旋转值
 FRotator GetComponentRotation() 返回组件的旋转值
 void SetWorldRotation() 设置组件的世界旋转值
 
-void UStaticMeshComponent SetRenderCustomDepth(bool) 设置渲染深度 true开启
+void SetRenderCustomDepth(bool) 设置渲染深度 true开启
 
-void UStaticMeshComponent SetStaticMesh( UStaticMesh ) 设置静态模型
-void UStaticMeshComponent SetMaterial( 0, UMaterial ) 设置材质
+void SetStaticMesh( UStaticMesh ) 设置静态模型
+void SetMaterial( 0, UMaterial ) 设置材质
+
+
+void SetSimulatePhysics( bool ) 设置物理效果
+void SetPhysicsAngularVelocity(FVector) 设置物理角速度_旧
+void SetPhysicsAngularVelocityInDegrees(FVector) 设置物理角速度_新
