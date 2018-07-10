@@ -3,6 +3,8 @@
 在 Project_Name.Build.cs 中加入
 PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "UMG" });
 
+如果需要使用到图片数据的替换，需要加入 { "Slate", "SlateCore" }
+
 在 Project_Name.h 中加入
 #include "Runtime/UMG/Public/UMG.h"
 #include "Runtime/UMG/Public/UMGStyle.h"
