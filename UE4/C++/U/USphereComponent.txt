@@ -10,3 +10,7 @@ OnComponentHit.AddDynamic(this, &AActor::func);ÅäÖÃ°ó¶¨´ò»÷Åö×²·½·¨£¬µ±±»Åö×²Ê±Æ
 UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit
 
 ¶¨Òå·½·¨Ê±£¬±ØĞëÔÚ·½·¨ÉÏ¼ÓÈë UFUNCTION
+
+SetCollisionEnabled(ECollisionEnabled::type); 						ÉèÖÃÅö×²ÊôĞÔ
+SetCollisionResponseToAllChannels(ECollisionResponse::type); 				ÉèÖÃËùÓĞµÄÅö×²Í¨µÀµÄÅö×²ÀàĞÍ
+SetCollisionResponseToChannel(ECollisionChannel::type, ECollisionResponse::type); 	ÉèÖÃµ¥¸öÍ¨µÀµÄÅö×²ÀàĞÍ

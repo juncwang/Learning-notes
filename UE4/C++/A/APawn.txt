@@ -13,17 +13,19 @@ virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputCompone
 APawn APawn::StaticClass() 返回自身的静态类
 
 方法
-AddControllerYawInput(float val);  增加控制器在YAW 轴上的旋转
-AddControllerPitchInput(float val); 增加控制器在PITCH 轴上的旋转
-AddControllerRollInput(float val); 增加控制器在Roll 轴上的旋转
-AddMovementInput(vector,val); 增加角色移动以向量 vector 方向，val 速度
 AddActorWorldOffset(Location);增加pawn的世界坐标位置偏移量
 Jump(); 开始跳跃的方法
 StopJumping(); 停止跳跃的方法
+void AddMovementInput(FVector WorldDirection, float ScaleValue = 1.0f, bool bForce = false) 添加移动输入
+void AddControllerPitchInput(float Val)	添加控制器输入
+void AddControllerYawInput(float Val)	添加控制器输入
+void AddControllerRollInput(float Val)	添加控制器输入
 
 AController GetController()； 获取控制器
 
 GetViewportSize(Size_X, Size_X); 获取荧屏尺寸，并传值给 Size_X,Size_Y；
+
+GetVelocity()			获取 Pawn 当前速度
 
 变量
 PrimaryActorTick.bCanEverTick = true; 打开每帧调用函数 Tick()

@@ -1,5 +1,10 @@
 参数
-bOrientRotationToMovement = true;  角色是否在输入方向上移动
-RotationRate = FRotator(0.0f, 540.0f, 0.0f); 控制角色旋转的速率
-JumpZVelocity = 600.f; 控制角色跳跃的速度
-AirControl = 0.2f; 角色空气控制
+bOrientRotationToMovement = true;  		角色是否在输入方向上移动
+RotationRate = FRotator(0.0f, 540.0f, 0.0f); 	控制角色旋转的速率
+JumpZVelocity = 600.f; 				控制角色跳跃的速度
+AirControl = 0.2f; 				角色空气控制
+MaxWalkSpeed = 450.0f 				设置最大移动速度
+
+bUseControllerDesiredRotation = true; 		使用控制器控制所需的旋转
+
+===============================================================

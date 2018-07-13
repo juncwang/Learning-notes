@@ -1,0 +1,20 @@
+Pawn 装载它后可以通过 AddMovementInput 等方法进行移动操作
+
+=======================================================================================
+
+头文件 
+
+#include "GameFramework/PawnMovementComponent.h"
+#include "GameFramework/FloatingPawnMovement.h"
+
+=======================================================================================
+
+创建方法
+
+PawnMovementCom = CreateDefaultSubobject<UPawnMovementComponent,UFloatingPawnMovement>(TEXT("PawnMovementCom"));
+
+=======================================================================================
+
+驱动部件
+
+PawnMovementCom->UpdatedComponent = RootComponent;

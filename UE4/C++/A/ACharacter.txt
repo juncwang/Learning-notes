@@ -9,12 +9,30 @@ virtual void Tick(float DeltaTime) override;
 SetupPlayerInputComponent 获取控制器信息
 virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+=======================================================================================================
+
 方法
+
 UCapsuleComponent GetCapsuleComponent()；获取碰撞胶囊体
 UCharacterMovementComponent GetCharacterMovement()；获取该类的移动组件
 
+void AddMovementInput(FVector WorldDirection, float ScaleValue = 1.0f, bool bForce = false) 添加移动输入
+FVector GetActorForwardVector()		获取 actor 的正方向
+FVector GetActorRightVector()		获取 actor 的右方向
+
+void AddControllerPitchInput(float Val)	添加控制器输入
+void AddControllerYawInput(float Val)	添加控制器输入
+void AddControllerRollInput(float Val)	添加控制器输入
+
+=======================================================================================================
+
 变量
+
 PrimaryActorTick.bCanEverTick = true; 打开每帧调用函数 Tick()
+
+bUseControllerRotationPitch = false;	使用控制器旋转间距
+bUseControllerRotationRoll = false;	使用控制器旋转卷
+bUseControllerRotationYaw = false;	使用控制器旋转偏航
 
 GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f); 设置碰撞胶囊体大小
 GetCharacterMovement()->bOrientRotationToMovement = true;  角色是否在输入方向上移动

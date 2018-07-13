@@ -1,0 +1,31 @@
+头文件 #include "Components/TimelineComponent.h"
+
+===========================================================================
+
+用法：利用 CurveFloat 曲线调整状态
+
+定义变量
+UCurveFloat* TurnBackCurve;
+FTimeline TurnBackTimeLine;
+
+初始化变量
+static ConstructorHelpers::FObjectFinder<UCurveFloat> FindTurnBackCurve(TEXT("/Game/Animation/TurnBackCurve"));
+TurnBackCurve = FindTurnBackCurve.Object;
+
+游戏开始时执行
+if (TurnBackCurve)
+{
+	FOnTimelineFloat TurnBackTimeLineCallBack;
+	FOnTimelineEventStatic TurnBackTimelineFinishedCallback;
+
+	TurnBackTimeLineCallBack.BindUFunction(this, TEXT("UpdateControllerRotation"));			调用的方法名，执行时调用
+	TurnBackTimelineFinishedCallback.BindLambda([this]() {bUseControllerRotationYaw = true; });	回调函数，执行完时调用
+	TurnBackTimeLine.AddInterpFloat(TurnBackCurve, TurnBackTimeLineCallBack);
+	TurnBackTimeLine.SetTimelineFinishedFunc(TurnBackTimelineFinishedCallback);
+}
+
+游戏每帧调用方法
+TurnBackTimeLine.TickTimeline(DeltaTime);								把每帧的时间给到它，以便更新数据用
+
+游戏中开始执行需调用
+TurnBackTimeLine.PlayFromStart();									开始使用曲线时调用

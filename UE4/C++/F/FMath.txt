@@ -5,3 +5,9 @@ number FMath::Sin( number ) 参数 number 的正弦值。返回值在 -1.0 到 1.0 之间
 bool IsNearlyEqual(float A, float B, float c) ;  a-b的绝对值 小于等于 c 返回真
 
 FRotator FMath::RInterpTo( thisRotation, tragetRotation, GetWorld()->GetDeltaSeconds(), speed) 按speed的速度从 目前的旋转，到目标的旋转值
+FRotator FMath::VInterpTo
+FRotator FMath::FInterpTo
+
+float FMath::ClampAngle(DeltaRotation.Yaw, -90, 90)	返回一个数值在 -90 到 90 之间
+
+FRotator FMath::Lerp(CurrentContrtolRotation, TargetControlRotation, Speed);按speed的速度从 目前的旋转，到目标的旋转值

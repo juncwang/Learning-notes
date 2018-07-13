@@ -3,7 +3,9 @@
 方法
 USpringArmComponent->SetupAttachment(RootComponent); 设置依附的组件
 USpringArmComponent->AttachTo(RootComponent); 设置依附的组件
+
 USpringArmComponent->SetWorldRotation(FRotator(-60.0f, 0.0f, 0.0f)); 设置世界旋转值
+USpringArmComponent->SetRelativeLocation(FVector(0, 0, 110)); 设置相对位置坐标
 
 FTransfrom GetComponentToWorld()获取组件的Transfrom
 FQuat GetComponentQuat() 获取组件的四位旋转值
@@ -11,14 +13,21 @@ FRotator GetComponentRotation() 返回组件的旋转值
 void SetWorldRotation() 设置组件的世界旋转值
 
 变量
+
 USpringArmComponent->bDoCollisionTest = true 有无碰撞
 USpringArmComponent->bUsePawnControlRotation = true; 设置是否用角色控制器控制旋转
 USpringArmComponent->TargetArmLength = 300.0f; 设置弹簧的长度
 
 USpringArmComponent->RelativeRotation = FRotator(-60.f, 0, 0); 设置相对旋转角度
+USpringArmComponent->SocketOffset = FVector(0, 25, 0);	设置偏移量
 USpringArmComponent->bInheritPitch = false;		设置相机不跟父及旋转
 USpringArmComponent->bInheritRoll = false;		设置相机不跟父及旋转		
 USpringArmComponent->bInheritYaw = false;		设置相机不跟父及旋转
 
 USpringArmComponent->bEnableCameraLag = true;		开启缓慢跟随效果
+USpringArmComponent->bEnableCameraRotationLag = true;	开启缓慢旋转跟随效果
 USpringArmComponent->CameraLagSpeed = 10.0f;		缓慢跟随速度
+
+静态变量
+
+USpringArmComponent::SocketName				末端的名称

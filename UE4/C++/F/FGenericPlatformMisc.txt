@@ -1,0 +1,14 @@
+此类主要用于获取计算机的系统及硬件信息
+
+静态方法
+
+FGenericPlatformMisc::GetMacAddressString();			获取计算机 Mac 地址
+FGenericPlatformMisc::GetHashedMacAddressString()		获取哈希的 Mac 地址
+FGenericPlatformMisc::GetUniqueDeviceId()			获取唯一设备ID
+FGenericPlatformMisc::GetDeviceId()				获取设备ID
+FGenericPlatformMisc::GetUniqueAdvertisingId()			获取独特的广告ID
+FGenericPlatformMisc::GetCPUVendor()				获取CPU供应商
+FGenericPlatformMisc::GetCPUBrand()				获得CPU品牌
+FGenericPlatformMisc::GetPrimaryGPUBrand()			获得主GPU品牌
+FGenericPlatformMisc::GetDeviceMakeAndModel()			获取设备制造和模型
+FGenericPlatformMisc::GetOSVersion()				获取操作系统版本

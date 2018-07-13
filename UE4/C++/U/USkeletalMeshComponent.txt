@@ -19,3 +19,5 @@ void SetSimulatePhysics( bool ) 设置物理效果
 void SetPhysicsAngularVelocity(FVector) 设置物理角速度_旧
 void SetPhysicsAngularVelocityInDegrees(FVector) 设置物理角速度_新
 void SetPhysicsLinearVelocity(FVector) 线性的物理速度(可以用来清除角速度移动FVector(0,0,0))
+
+void SetAnimInstanceClass(AnimInstance)	装载动画

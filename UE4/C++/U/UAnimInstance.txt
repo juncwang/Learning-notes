@@ -1,0 +1,11 @@
+继承方法
+
+virtual void NativeUpdateAnimation(float DeltaSeconds) override		每帧调用一次该方法对动画进行更新
+
+========================================================================================
+
+方法
+
+TryGetPawnOwner()		获取场景中的 Pawn 对象
+
+CalculateDirection(Velocity, Pawn->GetActorRotation())	计算速度向量和旋转向量之间的夹角，获得一个在 -180 到 180 之间的数值
