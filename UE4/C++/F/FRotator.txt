@@ -4,4 +4,4 @@ FRotator FRotator::ZeroRotator; 范围 FRotator 为零
 方法
 FRotator FRotator（FQuat); 把四位运算转成三维
 
-float FRotator::NormalizeAxis(DeltaRotation.Yaw);	返回一个标准在 -180 到 180之间的值
+float FRotator::NormalizeAxis(DeltaRotation.Yaw);	把值限制到 0-360之间

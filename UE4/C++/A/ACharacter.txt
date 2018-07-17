@@ -24,6 +24,11 @@ void AddControllerPitchInput(float Val)	添加控制器输入
 void AddControllerYawInput(float Val)	添加控制器输入
 void AddControllerRollInput(float Val)	添加控制器输入
 
+void Jump()				跳跃
+void StopJump()				停止跳跃
+void Crouch()				蹲下
+void UnCrouch()				站起来
+
 =======================================================================================================
 
 变量

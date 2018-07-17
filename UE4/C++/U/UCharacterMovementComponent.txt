@@ -1,10 +1,30 @@
 参数
-bOrientRotationToMovement = true;  		角色是否在输入方向上移动
+
+bOrientRotationToMovement = true;  		角色是否在键盘输入方向上移动
+bUseControllerDesiredRotation = true;		角色是否在控制器输入方向上移动
 RotationRate = FRotator(0.0f, 540.0f, 0.0f); 	控制角色旋转的速率
+
 JumpZVelocity = 600.f; 				控制角色跳跃的速度
-AirControl = 0.2f; 				角色空气控制
 MaxWalkSpeed = 450.0f 				设置最大移动速度
 
-bUseControllerDesiredRotation = true; 		使用控制器控制所需的旋转
+BrakingFrictionFactor = 0.1			制动摩擦系数(必须配合下面的参数才能有作用)
+BrakingDecelerationWalking = 512;		制动减速行走(角色移动阻力,值越小阻力越小动画越平滑)
+GroundFriction = 0.1				地面摩擦力(角色动画切换速度，越小越慢)
+
+CrouchedHalfHeight = 60				蹲下后胶囊体的高度
+MaxWalkSpeedCrouched = 120			蹲下后最大的移动速度
+
+AirControl = 0.2f; 				角色空气控制
 
 ===============================================================
+
+结构体
+
+NavAgentProps					关于 NavMovement 可以使用的一些参数(是否能 走，跳，蹲，飞，游泳等)
+
+===============================================================
+
+方法
+
+IsCrouching()					角色是否已经蹲下
+		
