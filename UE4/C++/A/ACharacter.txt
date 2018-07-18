@@ -9,6 +9,9 @@ virtual void Tick(float DeltaTime) override;
 SetupPlayerInputComponent 获取控制器信息
 virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+OnLanded 当角色接触到地面时调用
+virtual void OnLanded(const FHitResult& Hit) override
+
 =======================================================================================================
 
 方法
