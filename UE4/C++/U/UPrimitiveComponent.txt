@@ -1,0 +1,7 @@
+头文件 Components\PrimitiveComponent.h
+
+========================================================================================
+
+方法:
+
+void AddImpulseAtLocation(FVector Impulse, FVector Location, FName BoneName = NAME_None)	在位置添加冲力

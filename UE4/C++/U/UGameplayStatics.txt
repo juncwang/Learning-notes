@@ -19,3 +19,5 @@ UGameplayStatics::OpenLevel(const UObject* WorldContextObject, FName LevelName, 
 切换MAPS
 
 //--------------------------------------------------------------------------------------------//
+UParticleSystemComponent* UGameplayStatics::SpawnEmitterAtLocation(const UObject* WorldContextObject, UParticleSystem* EmitterTemplate, FVector SpawnLocation, FRotator SpawnRotation, FVector SpawnScale, bool bAutoDestroy)
+在位置上发射粒子系统
