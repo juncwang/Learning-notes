@@ -1,0 +1,55 @@
+﻿================================================================================================
+继承关系
+================================================================================================
+
+UObject
+
+================================================================================================
+头文件
+================================================================================================
+
+GameFramework/Actor.h
+
+================================================================================================
+变量
+================================================================================================
+
+InitialLifeSpan							初始化生命周期
+RootComponent							根组件
+
+================================================================================================
+方法
+================================================================================================
+
+BeginPlay							开始游戏时事件
+Tick								每帧调用事件
+
+Destroy								破坏自身
+
+GetActorEnableCollision						获取演员碰撞是否开启
+GetActorEyesViewPoint						获取演员眼睛位置及旋转
+GetActorForwardVector						获取演员的正前方向
+GetActorLocation						获取演员的位置
+GetActorRotation						获取演员的旋转
+GetActorScale							获取演员的缩放
+GetActorScale3D							获取演员的世界缩放
+GetActorTransform						获取演员的变换
+GetActorUpVector						获取演员的正上方向
+GetGameInstance							获取游戏实例
+GetLevel							获取关卡
+GetWorld							获取世界
+GetWorldTimerManager						获取世界计时器信息
+
+SetActorEnableCollision						设置演员启用碰撞
+SetActorHiddenInGame						设置演员隐藏在游戏内
+SetActorLocation						设置演员的位置
+SetActorLocationAndRotation					设置演员的位置和旋转
+SetActorRelativeLocation					设置演员的相对位置
+SetActorRelativeRotation					设置演员的相对旋转
+SetActorRelativeScale3D						设置演员的相对缩放
+SetActorRelativeTransform					设置演员的相对变换
+SetActorRotation						设置演员的旋转
+SetActorScale3D							设置演员的缩放
+SetActorTickEnabled						设置演员的开启每帧调用函数
+SetActorTransform						设置演员的变换
+
