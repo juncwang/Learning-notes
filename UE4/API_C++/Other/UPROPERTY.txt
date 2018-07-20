@@ -1,0 +1,19 @@
+UPROPERTY（ 参数 1 ， 参数 2， 参数 3， ... ...）
+
+参数 1
+VisibleAnywhere 在蓝图内全部可见
+EditDefaultsOnly 在蓝图编辑面板中可以设置初始值，但无法在蓝图中进行调用. 只能放在类的 private 内
+EditAnywhere 在蓝图编辑面板中可以设置初始值，并且可以在蓝图中进行调用. 需要放在类的 public 内
+
+参数 2
+BlueprintReadOnly 在蓝图内只能够读取不能修改
+BlueprintReadWrite 在蓝图内可以读取与修改
+
+参数 3
+Category = "Group"  设置该函数的分组
+
+参数 4
+Meta = (AllowPrivateAccess = "true") 打开私有属性，让蓝图可访问
+
+参数 6
+AdvancedDisplay 控制参数在蓝图参数表内显示在隐藏下拉列表内

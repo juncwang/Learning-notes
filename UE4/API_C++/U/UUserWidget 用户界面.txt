@@ -2,23 +2,36 @@
 继承关系
 ================================================================================================
 
-UObjectBase
-UObjectBaseUtility
+UObject
+UVisual
+UWidget
 
 ================================================================================================
 头文件
 ================================================================================================
 
-UObject/NoExportTypes.h
+在项目 h 文件中加入
+#include "Runtime/UMG/Public/UMG.h"
+#include "Runtime/UMG/Public/UMGStyle.h"
+#include "Runtime/UMG/Public/Slate/SObjectWidget.h"
+#include "Runtime/UMG/Public/IUMGModule.h"
+#include "Runtime/UMG/Public/Blueprint/UserWidget.h"
+(需在项目cs 文件内 PublicDependencyModuleNames.AddRange 内加入 UMG 字段)
 
 ================================================================================================
-静态方法
+变量方法
 ================================================================================================
 
-StaticClass							获取静态类
+bCanEverTick						是否开启每帧调用事件
 
 ================================================================================================
 方法
 ================================================================================================
 
-CreateDefaultSubobject						创建默认子对象
+CreateWidget						创建界面方法(可以用其他类进行调用)
+
+NativeTick						每帧调用事件
+
+AddToViewport						把界面添加到银屏上去
+GetWidgetFromName					用名字获取界面上的空间
+

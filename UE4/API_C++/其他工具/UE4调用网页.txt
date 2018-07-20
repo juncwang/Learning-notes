@@ -1,0 +1,10 @@
+FString url = inUrl;
+	
+
+FString cmd = "start " + url;
+	
+
+std::string MyStdString(TCHAR_TO_UTF8(*cmd));
+	
+
+system(MyStdString.c_str());

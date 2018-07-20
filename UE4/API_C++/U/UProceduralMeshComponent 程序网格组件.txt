@@ -7,19 +7,25 @@ UActorComponent
 USceneComponent
 UPrimitiveComponent
 UMeshComponent
-USkinnedMeshComponent
 
 ================================================================================================
 头文件
 ================================================================================================
 
-Components/SkeletalMeshComponent.h
+ProceduralMeshComponent.h
+(需在项目cs 文件内 PublicDependencyModuleNames.AddRange 内加入 ProceduralMeshComponent 字段)
+(需在项目cuproject 文件内 AdditionalDependencies 内加入 ProceduralMeshComponent 字段)
+
+================================================================================================
+变量
+================================================================================================
+
+bUseAsyncCooking					是否开启多线程
 
 ================================================================================================
 方法
 ================================================================================================
 
-GetAnimInstance						获取动画实例
-
-SetAnimInstanceClass					设置动画实例
-SetSkeletalMesh						设置骨骼模型
+ContainsPhysicsTriMeshData				启用碰撞
+CreateMeshSection_LinearColor				创建网格
+UpdateMeshSection_LinearColor				更新网格	

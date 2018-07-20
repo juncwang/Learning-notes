@@ -14,8 +14,7 @@ APawn APawn::StaticClass() 返回自身的静态类
 
 方法
 AddActorWorldOffset(Location);增加pawn的世界坐标位置偏移量
-Jump(); 开始跳跃的方法
-StopJumping(); 停止跳跃的方法
+
 void AddMovementInput(FVector WorldDirection, float ScaleValue = 1.0f, bool bForce = false) 添加移动输入
 void AddControllerPitchInput(float Val)	添加控制器输入
 void AddControllerYawInput(float Val)	添加控制器输入

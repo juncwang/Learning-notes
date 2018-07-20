@@ -35,5 +35,16 @@ OnComponentHit.AddDynamic					组件命中目标事件
 ================================================================================================
 
 AddImpulseAtLocation						在位置添加冲力
+SetMaterial							设置材质
+
+SetSimulatePhysics						设置物理效果
+SetPhysicsAngularVelocityInDegrees				设置角物理速度
+SetPhysicsLinearVelocity					设置线性物理速度
+
+SetCollisionEnabled						设置碰撞属性
+SetCollisionResponseToAllChannels				设置所有的碰撞通道的碰撞类型
+SetCollisionResponseToChannel					设置单个通道的碰撞类型
+
 SetOnlyOwnerSee							设置是否仅所有者才能看到
+SetRenderCustomDepth						设置渲染自定义深度
 SetWalkableSlopeOverride					设置可步行斜率覆盖

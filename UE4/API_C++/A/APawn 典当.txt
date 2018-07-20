@@ -12,11 +12,25 @@ AActor
 GameFramework/Pawn.h
 
 ================================================================================================
+变量
+================================================================================================
+
+bUseControllerRotationPitch					是否使用控制器旋转间距
+bUseControllerRotationRoll					是否使用控制器旋转卷
+bUseControllerRotationYaw					是否使用控制器旋转偏航
+
+Controller							控制器
+
+================================================================================================
 方法
 ================================================================================================
+
+SetupPlayerInputComponent					绑定控制器方法事件
 
 AddMovementInput						增加移动输入
 AddControllerPitchInput						增加控制器 Pitch 轴输入
 AddControllerRollInput						增加控制器 Roll 轴输入
 AddControllerYawInput						增加控制器 Yaw 轴输入
+
+GetController							获取控制器
 GetControlRotation						获取控制器旋转

@@ -1,0 +1,10 @@
+将私有变量使用方法暴露出来
+
+private:
+
+UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "BaseAttrubute", meta = (AllowPrivateAccess = "true"))
+class UArrowComponent* OpenFirePoint;
+
+public:
+
+FORCEINLINE class UArrowComponent* GetSpawnPoint() const { return OpenFirePoint;}

@@ -2,23 +2,35 @@
 继承关系
 ================================================================================================
 
-UObjectBase
-UObjectBaseUtility
+UObject
+UVisual
+UWidget
 
 ================================================================================================
 头文件
 ================================================================================================
 
-UObject/NoExportTypes.h
+Components/Image.h
 
 ================================================================================================
-静态方法
+变量方法
 ================================================================================================
 
-StaticClass							获取静态类
+Brush.SetResourceObject					设置资源对象
+(需在项目cs 文件内 PublicDependencyModuleNames.AddRange 内加入 Slate SlateCore 字段)
 
 ================================================================================================
 方法
 ================================================================================================
 
-CreateDefaultSubobject						创建默认子对象
+SetBrush						设置笔刷
+SetBrushFromAsset					用资源设置笔刷
+SetBrushFromAtlasInterface				用地图界面设置笔刷
+SetBrushFromMaterial					用材质设置笔刷
+SetBrushFromTexture					用2D图片设置笔刷
+SetBrushFromTextureDynamic				用动态2D图片设置笔刷
+SetBrushSize						设置笔刷大小
+SetBrushTintColor					设置笔刷颜色
+SetColorAndOpacity					设置笔刷颜色及透明度
+SetOpacity						设置透明度
+

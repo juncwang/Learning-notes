@@ -4,34 +4,32 @@
 
 UObject
 AActor
-APawn
+AController
 
 ================================================================================================
 头文件
 ================================================================================================
 
-GameFramework/Character.h
+GameFramework/PlayerController.h
 
 ================================================================================================
 变量
 ================================================================================================
 
+bShowMouseCursor 					是否开启鼠标显示
+DefaultMouseCursor 					默认鼠标样式
+
 ================================================================================================
 方法
 ================================================================================================
 
-OnLanded							落地时触发事件
+SetupInputComponent					绑定控制器方法事件
 
-CanCrouch							获取是否蹲下
-CanJump								获取是否跳跃
+GetHUD							获取HUD
 
-GetArrowComponent						获取箭头组件
-GetCapsuleComponent						获取胶囊组件
-GetCharacterMovement						获取角色移动组件
-GetMesh								获取模型	
+GetHitResultUnderCursor					从鼠标位置发射射线并获取射线射中的目标
 
-Crouch								蹲下
-OnStartCrouch							开始蹲下
-UnCrouch							停止蹲下
-Jump								跳跃
-StopJump							停止跳跃
+GetMousePosition					获取鼠标坐标信息
+GetViewportSize						获取屏幕大小信息
+
+SetViewTargetWithBlend					使用混合设置视角目标

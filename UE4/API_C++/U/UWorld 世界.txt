@@ -14,4 +14,16 @@ Engine/World.h
 方法
 ================================================================================================
 
+GetAuthGameMode							获取游戏模式
+GetGameInstance							获取游戏实例
+GetGameState							获取游戏状态
+GetLevelScriptActor						获取关卡脚本演员
+
+GetDeltaSeconds							获取每帧所花的时间
+GetRealTimeSeconds						获取游戏运行时间
+GetGravityZ							获取当前世界的 Z 分量
+
+LineTraceSingleByChannel					发射一条射线
 SpawnActor							发射演员
+
+

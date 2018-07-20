@@ -1,0 +1,20 @@
+
+创建枚举类型
+UENUM()
+namespace MyCharacterType
+{
+	enum Type
+	{
+		Type_1,
+		Type_2,
+		Type_3,
+		Type_4,
+		Type_5,
+		Type_6,
+		Type_7
+	};
+}
+
+使用枚举类型
+UPROPERTY()
+	TEnumAsByte<MyCharacterType::Type> CustomA;
