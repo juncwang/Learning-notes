@@ -29,5 +29,6 @@ OpenLevel						打开关卡
 PlaySoundAtLocation					在位置播放声音
 RemovePlayer						删除玩家
 SpawnEmitterAtLocation					发射粒子系统在位置上
+SpawnEmitterAttached					发射粒子系统在组件上
 SpawnObject						发射一个对象
 SpawnSoundAtLocation					发射声音在位置上

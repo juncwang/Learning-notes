@@ -2,8 +2,8 @@ UPROPERTY（ 参数 1 ， 参数 2， 参数 3， ... ...）
 
 参数 1
 VisibleAnywhere 在蓝图内全部可见
-EditDefaultsOnly 在蓝图编辑面板中可以设置初始值，但无法在蓝图中进行调用. 只能放在类的 private 内
-EditAnywhere 在蓝图编辑面板中可以设置初始值，并且可以在蓝图中进行调用. 需要放在类的 public 内
+EditDefaultsOnly 在蓝图编辑面板中可以设置初始值，但无法在蓝图中进行调用. 
+EditAnywhere 在蓝图编辑面板中可以设置初始值，并且可以在蓝图中进行调用. 
 
 参数 2
 BlueprintReadOnly 在蓝图内只能够读取不能修改

@@ -16,6 +16,8 @@ static ConstructorHelpers::FObjectFinder		获取蓝图 UObject/ConstructorHelper
 全局方法
 ================================================================================================
 
+Cast							强制转换类型
+
 DrawDebugSphere						绘制园 DrawDebugHelpers.h
 
 NewObject						把TSubclassOf类型数据转换为指针类型数据
