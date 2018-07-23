@@ -9,6 +9,7 @@
 ================================================================================================
 
 GEngine->AddOnScreenDebugMessage			在屏幕上打印文字
+GEngine->Exec						在游戏中执行引擎指令
 static ConstructorHelpers::FClassFinder			获取资源 UObject/ConstructorHelpers.h
 static ConstructorHelpers::FObjectFinder		获取蓝图 UObject/ConstructorHelpers.h
 

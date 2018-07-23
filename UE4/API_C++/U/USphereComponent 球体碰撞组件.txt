@@ -18,4 +18,7 @@ Components/SphereComponent.h
 方法
 ================================================================================================
 
+GetScaledSphereRadius						获取球体的真实半径(乘以缩放值)
+
 InitSphereRadius						初始球体半径
+
