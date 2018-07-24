@@ -26,6 +26,7 @@ GetRealTimeSeconds					获得真实运行时间秒数
 GetTimeSeconds						获得游戏运行时间秒数
 GetWorldDeltaSeconds					获得世界每帧所用时间秒数
 OpenLevel						打开关卡
+PlaySound2D						播放音乐
 PlaySoundAtLocation					在位置播放声音
 RemovePlayer						删除玩家
 SpawnEmitterAtLocation					发射粒子系统在位置上

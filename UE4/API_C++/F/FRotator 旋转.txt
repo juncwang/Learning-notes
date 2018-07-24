@@ -11,5 +11,7 @@ NormalizeAxis						把值限制到0-360之间
 
 FRotator						把四位运算转成三维
 
+Vector							把旋转量转成向量
+
 
 

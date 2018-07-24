@@ -34,8 +34,9 @@ OnComponentHit.AddDynamic					组件命中目标事件
 方法
 ================================================================================================
 
+AddImpulse							添加冲力
 AddImpulseAtLocation						在位置添加冲力
-AddRadialForce							在位置添加径向力(作用物体必须勾选 Generate Overlap Events)
+AddRadialForce							在位置添加径向力(作用物体必须勾选 Generate Overlap Events 及 SetSimulatePhysics(true))
 
 GetOverlappingComponents					获取重叠的组件组
 

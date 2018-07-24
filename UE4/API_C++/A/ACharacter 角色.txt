@@ -28,7 +28,9 @@ CanJump								获取是否跳跃
 GetArrowComponent						获取箭头组件
 GetCapsuleComponent						获取胶囊组件
 GetCharacterMovement						获取角色移动组件
-GetMesh								获取模型	
+GetMesh								获取模型
+
+LaunchCharacter							弹出角色	
 
 Crouch								蹲下
 OnStartCrouch							开始蹲下
