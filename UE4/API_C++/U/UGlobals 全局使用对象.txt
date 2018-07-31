@@ -24,4 +24,4 @@ DrawDebugSphere						绘制园 DrawDebugHelpers.h
 NewObject						把TSubclassOf类型数据转换为指针类型数据
 LoadClass						加载蓝图方法
 LoadObject						加载资源方法
-UE_LOG							打印LOG (LogTemp ... 等)
+UE_LOG							打印LOG (LogTemp,Log, ... 等)
