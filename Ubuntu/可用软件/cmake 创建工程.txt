@@ -1,0 +1,27 @@
+安装方法
+apt-get install cmake
+
+//=======================================================================
+
+需要在工程目录下预先创建一个 CMakeLists.txt 配置文件
+并在文件内写入参数如下：
+
+cmake_minimum_required( VERSION 2.8 )		//指定版本号
+
+project( helloSLAM )				//创建工程名称
+
+add_executable( helloslam main.cpp )		//添加可执行文件
+
+add_library( hello hello.cpp )			//添加库文件
+
+add_executable( userhello userhello.cpp )	//添加可执行文件
+target_link_libraries( userhello hello )	//链接可执行程序和库
+
+//=======================================================================
+
+创建工程方法
+cmake . 				//使用当前目录下的配置文件创建工程
+cmake .. 				//使用上级目录下的配置文件创建工程
+
+并编译工程
+make

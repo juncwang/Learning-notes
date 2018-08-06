@@ -1,0 +1,12 @@
+安装方法
+apt-get install g++
+
+使用方法
+g++ main.cpp
+创建一个 a.out 的执行文件
+
+g++ main.cpp -o filename
+创建一个 filename 的执行文件
+
+运行文件
+./filename
