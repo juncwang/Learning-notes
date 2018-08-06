@@ -10,6 +10,8 @@ cmake_minimum_required( VERSION 2.8 )		//指定版本号
 
 project( helloSLAM )				//创建工程名称
 
+include_directories( "/usr/include/eigen3" )	//添加系统头文件
+
 add_executable( helloslam main.cpp )		//添加可执行文件
 
 add_library( hello hello.cpp )			//添加库文件
