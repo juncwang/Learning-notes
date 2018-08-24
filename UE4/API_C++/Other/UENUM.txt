@@ -1,20 +1,33 @@
 
 创建枚举类型
+
+==============================================================
+// Old enum
 UENUM()
-namespace MyCharacterType
+namespace EThing
 {
-	enum Type
-	{
-		Type_1,
-		Type_2,
-		Type_3,
-		Type_4,
-		Type_5,
-		Type_6,
-		Type_7
-	};
+    enum Type
+    {
+        Thing1,
+        Thing2
+    };
 }
 
-使用枚举类型
+-------------------------------------------------------------
+
 UPROPERTY()
-	TEnumAsByte<MyCharacterType::Type> CustomA;
+TEnumAsByte<EThing::Type> MyProperty;
+
+=============================================================
+// New enum
+UENUM()
+enum class EThing : uint8
+{
+    Thing1,
+    Thing2
+}
+
+------------------------------------------------------------
+
+UPROPERTY()
+EThing MyProperty;
