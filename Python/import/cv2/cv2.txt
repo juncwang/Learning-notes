@@ -45,6 +45,6 @@ gray_frame = cv2.cvtColor(color_frame, cv2.COLOR_BGR2GRAY)		// 把彩色图片�
 
 
 
-cv2.waitKey(0)						// 等待键盘输入，进程等待.( 按时大于0时，代表等待多少毫秒 - 但是可以键入键盘键打断等待）
+cv2.waitKey(0) & 0xFF					// 等待键盘输入，进程等待.( 按时大于0时，代表等待多少毫秒 - 但是可以键入键盘键打断等待）
 cv2.destroyAllWindows()					// 销毁所有的窗口
 
