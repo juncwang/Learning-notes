@@ -3,7 +3,7 @@ import numpy
 
 方法
 
-imp = np.zeros((512,512,3),np.uint8)			// 创建一个全部值为 0 的矩阵( 元祖矩阵，类型np.uint8）
+imp = np.zeros((512,512,3),np.uint8)			// 创建一个图片 全部值为 0 的矩阵( 元祖矩阵，类型np.uint8）
 
 
 
