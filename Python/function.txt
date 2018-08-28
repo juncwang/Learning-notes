@@ -24,6 +24,7 @@ str(byte,'utf8')					//转换成 str 类型,并且编码格式为 utf-8
 eval(var)						//转换成 字典,元祖,列表
 repr(var)						//转换成 字符串(忽略转义字符作用),方便电脑识别，等价于 r"str"
 iter(var)						//转换成 迭代器
+ord(str)						//转换成 key值
 
 变量操作
 

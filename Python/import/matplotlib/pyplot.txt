@@ -1,0 +1,5 @@
+from matplotlib import pyplot
+
+plt.imshow( imgVar, cmap = 'gray', interpolation = 'bicubic')		// 显示图片 ( imgVar 需要图片， interpolation = 'bicubic'优化图片）
+plt.xticks([]), plt.yticks([])						// 隐藏标尺
+plt.show()
