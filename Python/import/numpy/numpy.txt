@@ -3,8 +3,10 @@ import numpy
 
 方法
 
-imp = np.zeros((512,512,3),np.uint8)			// 创建一个图片 全部值为 0 的矩阵( 元祖矩阵，类型np.uint8）
+img = np.zeros((512,512,3),np.uint8)			// 创建一个图片 全部值为 0 的矩阵( 元祖矩阵，类型np.uint8）
 
+pts = np.array([[10,5], [20,30], [72,20], [50,10]])	// 创建一个4*2的矩阵
+pts = pts.reshape((-1,1,2))				// 将矩阵转换成Row*1*2的矩阵
 
 
 
