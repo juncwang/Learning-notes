@@ -20,6 +20,8 @@ cv2.LINE_AA			// 抗锯齿
 
 color
 cv2.COLOR_BGR2GRAY		// 彩色图片转成灰度图
+cv2.COLOR_GRAY2BGR		// 灰度图转成彩色图片
+cv2.COLOR_BGR2HSV		// 彩色图片转HSV
 
 fontStyle
 cv2.FONT_HERSHEY_SIMPLEX	// 文字类型
@@ -32,17 +34,78 @@ cv2.BORDER_DEFAULT
 cv2.BORDER_REPLICATE
 cv2.BORDER_WRAP
 
+threshold
+cv2.THRESH_BINARY
+cv2.THRESH_BINARY_INV
+cv2.THRESH_TRUNC
+cv2.THRESH_TOZERO
+cv2.THRESH_TOZERO_INV
+cv2.THRESH_OTSU
+
+thresh_type
+cv2.ADAPTIVE_THRESH_MEAN_C
+cv2.ADAPTIVE_THRESH_GAUSSIAN_C
+
 ===========================================================================================================
 
 方法
+===========================================================================================================
+运算
+
+kernel = cv2.getStructuringElement(cv2.MORPH_RECT,(5, 5))	// 获取 5x5 的方向矩阵
+kernel = cv2.getStructuringElement(cv2.MORPH_CROSS,(5, 5))	// 获取 5x5 的十字矩阵
+kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(5, 5))	// 获取 5x5 的椭圆矩阵
+
+
+===========================================================================================================
+图片运算
+
+img = cv2.add(img,img)				// 加法运算，如果大于255就等于255
+img = cv2.absdiff(img1,img2)				// 减法运算
+img = img + img					// 加法运算，如果大于255就减去255得到余值
+img = cv2.addWeighted(img1,0.7,img2,0.3,0)		// 图片融合（图一，透明度，图二，透明度，gamma）
+
+ret, mask = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)	// 返回图片阈值（输入灰度图片，阈值，超过阈值所赋予的值，计算阈值的类型）
+ret, mask = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)	
+						// 返回图片阈值（输入灰度图片，阈值，超过阈值所赋予的值，计算阈值的类型 + 基于直方图的二值化）
+mask = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+						// 返回自适应阈值（输入灰度图，超过阈值所赋予的值，阈值的计算方法，计算阈值的类型，图片中分块的大小，阈值计算方法中的常数项）
+mask = cv2.inRange(hsv, lower_red, upper_red)		// 利用hsv设置阈值（hsv图片，阈值，超过阈值所赋予的值）
+
+imgInv = cv2.bitwise_not(img)				// 图片颜色反转
+img = cv2.bitwise_and(img1, img2,  mask = mask)		// 图片与运算
+img = cv2.bitwise_or(img1, img2,  mask = mask)		// 图片或运算
+img = cv2.bitwise_xor(img1, img2,  mask = mask)		// 图片异或运算
+
+img=cv2.filter2D(img,-1,kernel)				// 使用滤波对图片进行过滤(图片，固定参数，滤波值-详见numpy.array)
+
+img = cv2.blur(img,(5,5))				// 图片平滑模糊（图片，高斯矩阵-长宽（参数整奇数））
+img = cv2.medianBlur(img, i)				// 图片中值模糊（图片，参数整奇数）
+img = cv2.GaussianBlur(img,(5,5),0)			// 图片高斯模糊（图片，高斯矩阵-长宽（参数整奇数），差取值）
+img = cv2.bilateralFilter(img,9,75,75)			// 图片双边模糊（图片，颜色标准差，空间标准差，空间标准差）
+
+img = cv2.erode(img,kernel,iterations = 1)		// 腐蚀图片（图片，多维数组，次数）
+img = cv2.dilate(img,kernel,iterations = 1)			// 膨胀图片（图片，多维数组，次数）
+img = cv2.morphologyEx(img, cv2.MORPH_CLOSE, kernel)	// 闭运算（图片，运算类型闭合，多维数组）
+img = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel)	// 开运算（图片，运算类型开启，多维数组)
+img = cv2.morphologyEx(img, cv2.MORPH_TOPHAT, kernel)	// 顶运算（图片，运算类型开启，多维数组)
+img = cv2.morphologyEx(img, cv2.MORPH_BLACKHAT, kernel)	// 低运算（图片，运算类型开启，多维数组)
 
 ===========================================================================================================
 图片处理
 
-img = cv2.imread('imageURL',0)				// 读取图片地址 ( 地址，参数: 0.灰度图 1.彩色图 )
+img = cv2.imread('imageURL',0)			// 读取图片地址 ( 地址，参数: 0.灰度图 1.彩色图 )
 cv2.imshow('imgName',img)				// 显示读取后的图片 （ 显示框名称，图片变量 ）
 cd2.imwrite('SaveImageURLName',img)			// 将图片写入本地 （ 保存文件的名称及位置，图片变量）
 cv2.filip(img, 0)					// 图片翻转
+
+histr = cv2.calcHist([img], [i], None, [256], [0, 256])		// 获取直方图（图片，表示通道，Mask，...）
+
+img = cv2.line(img, (0,0), (511, 511), (255, 0, 0), 5, cv2.LINE_AA)			// 绘制一条直线（图片变量，位置一，位置二，颜色值，宽度，抗锯齿方式）
+img = cv2.rectangle(img, (0,0), (100,100), (134,234,98), 1, cv2.LINE_AA)		// 绘制一个矩形（图片变量，位置一，位置二，颜色值，宽度（-1代表填充），抗锯齿方式）
+img = cv2.circle(img, (255,255), 50, (0,0,255), -1, cv2.LINE_AA)			// 绘制一个圆形（图片变量，圆心，半径，颜色值，宽度（-1代表填充），抗锯齿方式）
+img = cv2.ellipse(img, (255,255), (100,50), 45, 0, 360, (23,128,66), -1, cv2.LINE_AA)	// 绘制一个椭圆（图片变量，圆心，长短轴半径，旋转角度，显示开始角度，显示结束角度，颜色，宽度（-1代表填充），抗锯齿方式）
+img = cv2.polylines(img, [pts], True, (234,123,234), 1, cv2.LINE_AA)			// 绘制一个多边形（图片变量，[RAW*1*2的点数组], 是否闭合，宽度（-1代表填充））
 
 ===========================================================================================================
 视频读取
@@ -71,15 +134,6 @@ out.release()								// 关闭视频流并保存
 gray_frame = cv2.cvtColor(color_frame, cv2.COLOR_BGR2GRAY)		// 把彩色图片转成灰度图
 
 ===========================================================================================================
-图片绘制
-
-img = cv2.line(img, (0,0), (511, 511), (255, 0, 0), 5, cv2.LINE_AA)			// 绘制一条直线（图片变量，位置一，位置二，颜色值，宽度，抗锯齿方式）
-img = cv2.rectangle(img, (0,0), (100,100), (134,234,98), 1, cv2.LINE_AA)		// 绘制一个矩形（图片变量，位置一，位置二，颜色值，宽度（-1代表填充），抗锯齿方式）
-img = cv2.circle(img, (255,255), 50, (0,0,255), -1, cv2.LINE_AA)			// 绘制一个圆形（图片变量，圆心，半径，颜色值，宽度（-1代表填充），抗锯齿方式）
-img = cv2.ellipse(img, (255,255), (100,50), 45, 0, 360, (23,128,66), -1, cv2.LINE_AA)	// 绘制一个椭圆（图片变量，圆心，长短轴半径，旋转角度，显示开始角度，显示结束角度，颜色，宽度（-1代表填充），抗锯齿方式）
-img = cv2.polylines(img, [pts], True, (234,123,234), 1, cv2.LINE_AA)			// 绘制一个多边形（图片变量，[RAW*1*2的点数组], 是否闭合，宽度（-1代表填充））
-
-===========================================================================================================
 文字绘制
 
 cv2.putText(img, 'fontText', (10,30), fontStyle, 1, (255,255,255), 1, cv2.LINE_AA)	// 在图片上绘制文字（图片变量，输出文字， 位置， 文字样式， 文字大小，颜色，宽度，抗锯齿方式）
@@ -88,14 +142,14 @@ cv2.putText(img, 'fontText', (10,30), fontStyle, 1, (255,255,255), 1, cv2.LINE_A
 窗口绘制
 
 cv2.namedWindow('image')				// 创建一个窗口（名称）
-cv2.setMouseCallback('image', funcName)			// 给窗口一个鼠标事件回掉函数（窗口名称，方法名称）
+cv2.setMouseCallback('image', funcName)		// 给窗口一个鼠标事件回掉函数（窗口名称，方法名称）
 def funcName(event, x, y, flags, param)			// 回掉函数的格式（事件，鼠标X位置，鼠标Y位置，旗帜，参数）
 
 ===========================================================================================================
 跟踪栏
 
 cv2.createTrackbar('name','image',0,255,func)		// 创建一个跟踪栏（名称，所在窗口名称，最小值，最大值，回掉方法）
-def func(x)						// 回掉函数的格式
+def func(x)					// 回掉函数的格式
 name = cv2.getTrackbarPos('name','image')		// 获取跟踪栏的值（跟踪栏名称，所在窗口名称）
 
 ===========================================================================================================
@@ -103,10 +157,15 @@ name = cv2.getTrackbarPos('name','image')		// 获取跟踪栏的值（跟踪栏�
 
 img = cv2.copyMakeBorder(img,10,10,10,10,cv2.BORDER_REPLICATE)	// 给图片添加一个边框（图片变量，上下左右边框宽度，边框类型）
 
-
 ===========================================================================================================
+
+cv2.useOptimized()					// 使用优化性能
+
+cv2.getTickCount()					// 获取时间戳
+cv2.getTickFrequency()				// 获取标准时间，除以标准时间得到所用时间
+
 b,g,r = cv2.split(img)					// 把图片通道的颜色分割出来
 img = cv2.merge((b,g,r))				// 把通道的颜色合并到图片上
-cv2.waitKey(0) & 0xFF					// 等待键盘输入，进程等待.( 按时大于0时，代表等待多少毫秒 - 但是可以键入键盘键打断等待）
-cv2.destroyAllWindows()					// 销毁所有的窗口
+cv2.waitKey(0) & 0xFF				// 等待键盘输入，进程等待.( 按时大于0时，代表等待多少毫秒 - 但是可以键入键盘键打断等待）
+cv2.destroyAllWindows()				// 销毁所有的窗口
 
