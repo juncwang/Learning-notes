@@ -46,22 +46,38 @@ thresh_type
 cv2.ADAPTIVE_THRESH_MEAN_C
 cv2.ADAPTIVE_THRESH_GAUSSIAN_C
 
+depthType
+cv2.CV_8U
+cv2.CV_16S
+cv2.CV_64F
+
+contoursMode
+cv2.RETR_EXTERNAL				// 表示只检测外轮廓
+cv2.RETR_LIST				// 检测的轮廓不建立等级关系
+cv2.RETR_CCOMP				// 建立两个等级的轮廓，上面的一层为外边界，里面的一层为内孔的边界信息。如果内孔内还有一个连通物体，这个物体的边界也在顶层。
+cv2.RETR_TREE				// 建立一个等级树结构的轮廓。
+
+contoursMethod
+cv2.CHAIN_APPROX_NONE			// 存储所有的轮廓点，相邻的两个点的像素位置差不超过1，即max（abs（x1-x2），abs（y2-y1））==1
+cv2.CHAIN_APPROX_SIMPLE			// 压缩水平方向，垂直方向，对角线方向的元素，只保留该方向的终点坐标，例如一个矩形轮廓只需4个点来保存轮廓信息
+cv2.CHAIN_APPROX_TC89_L1			// 使用teh-Chinl chain 近似算法
+
 ===========================================================================================================
 
 方法
 ===========================================================================================================
-运算
+矩阵
 
 kernel = cv2.getStructuringElement(cv2.MORPH_RECT,(5, 5))	// 获取 5x5 的方向矩阵
 kernel = cv2.getStructuringElement(cv2.MORPH_CROSS,(5, 5))	// 获取 5x5 的十字矩阵
 kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(5, 5))	// 获取 5x5 的椭圆矩阵
 
-
 ===========================================================================================================
 图片运算
 
 img = cv2.add(img,img)				// 加法运算，如果大于255就等于255
-img = cv2.absdiff(img1,img2)				// 减法运算
+img = cv2.subtract(image,M)				// 减法运算
+img = cv2.absdiff(img1,img2)				// 减法运算后求绝对值
 img = img + img					// 加法运算，如果大于255就减去255得到余值
 img = cv2.addWeighted(img1,0.7,img2,0.3,0)		// 图片融合（图一，透明度，图二，透明度，gamma）
 
@@ -91,6 +107,12 @@ img = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel)	// 开运算（图片，运�
 img = cv2.morphologyEx(img, cv2.MORPH_TOPHAT, kernel)	// 顶运算（图片，运算类型开启，多维数组)
 img = cv2.morphologyEx(img, cv2.MORPH_BLACKHAT, kernel)	// 低运算（图片，运算类型开启，多维数组)
 
+img = cv2.Laplacian(img,cv2.CV_64F,ksize = 1)		// 拉普拉斯算子（图片，计算需要的深度（-1为默认深度），算子大小）
+imgx = cv2.Sobel(img,cv2.CV_64F,1,0,ksize=5)		// 索贝尔算子（图片，计算需要的深度（-1为默认深度），1，0，算子大小）
+imgy = cv2.Sobel(img,cv2.CV_64F,0,1,ksize=5)		// 索贝尔算子（图片，计算需要的深度（-1为默认深度），0，1，算子大小）
+
+img = cv2.Canny(img,100,200)				// 图片边界检查（图片，最小值，最大值）
+
 ===========================================================================================================
 图片处理
 
@@ -105,7 +127,7 @@ img = cv2.line(img, (0,0), (511, 511), (255, 0, 0), 5, cv2.LINE_AA)			// 绘制�
 img = cv2.rectangle(img, (0,0), (100,100), (134,234,98), 1, cv2.LINE_AA)		// 绘制一个矩形（图片变量，位置一，位置二，颜色值，宽度（-1代表填充），抗锯齿方式）
 img = cv2.circle(img, (255,255), 50, (0,0,255), -1, cv2.LINE_AA)			// 绘制一个圆形（图片变量，圆心，半径，颜色值，宽度（-1代表填充），抗锯齿方式）
 img = cv2.ellipse(img, (255,255), (100,50), 45, 0, 360, (23,128,66), -1, cv2.LINE_AA)	// 绘制一个椭圆（图片变量，圆心，长短轴半径，旋转角度，显示开始角度，显示结束角度，颜色，宽度（-1代表填充），抗锯齿方式）
-img = cv2.polylines(img, [pts], True, (234,123,234), 1, cv2.LINE_AA)			// 绘制一个多边形（图片变量，[RAW*1*2的点数组], 是否闭合，宽度（-1代表填充））
+img = cv2.polylines(img, [pts], True, (234,123,234), 1, cv2.LINE_AA)		// 绘制一个多边形（图片变量，[RAW*1*2的点数组]必须是np.int32, 是否闭合，宽度）
 
 ===========================================================================================================
 视频读取
@@ -156,6 +178,41 @@ name = cv2.getTrackbarPos('name','image')		// 获取跟踪栏的值（跟踪栏�
 添加边框
 
 img = cv2.copyMakeBorder(img,10,10,10,10,cv2.BORDER_REPLICATE)	// 给图片添加一个边框（图片变量，上下左右边框宽度，边框类型）
+
+===========================================================================================================
+轮廓检测
+
+outImg, contours, hierarchy = cv2.findContours(make,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)	
+// 找到轮廓线（黑白图片，轮廓线检索模式，轮廓线近似方法）
+img = cv2.drawContours(img, contours, -1, (0,255,0), 3)
+// 绘制轮廓线（图片变量，轮廓线变量list，绘制轮廓list的哪一给变量（-1则是所有），轮廓颜色，线段宽度）
+cnt = contours[0];	
+M=cv2.moments(cnt)				// 获取图像的矩的字典
+area=cv2.contourArea(cnt)				// 获取轮廓面积
+perimeter = cv2.arcLength(cnt,True)			// 获取轮廓周长（2：是否闭合）
+approx = cv2.approxPolyDP(cnt,perimeter*0.1,True)		// 获取轮廓近似
+hull = cv2.convexHull(cv2.convexHull(cnt, hull,clockwise, returnPoints)
+						// 获取轮廓凸包(后三给参数可不填,3: 用顺时针还是逆时针bool,4: 凸包的坐标或凸包对应点的坐标bool）
+k=cv2.isContourConvex(cnt)				// 可以检测一个曲线是不是凸的
+x,y,w,h=cv2.boundingRect(cnt)				// 获取边界矩形
+pos = cv2.minAreaRect(cnt)				// 获取最小的边界矩形，返回元祖((x,y),(w,h),角度）
+pts = cv2.boxPoints(pos)				// 把最小边界矩形转换成点
+(x,y),radius = cv2.minEnclosingCircle(cnt)			// 获取最小外接圆
+ellipse = cv2.fitEllipse(cnt)				// 椭圆拟合
+[vx,vy,x,y]=cv2.fitLine(cnt,cv2.DIST_L2,0,0.01,0.01)		// 直线拟合
+
+---------------------------------------------------------------------------------------------------------------
+
+mask = np.zeros(imgGray.shape, np.uint8)
+cv2.drawContours(mask,[cut], 0,(255,255,255),-1)
+pixelpoints = cv2.findNonZero(mask)			// 获取轮廓区域内的所有点
+min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(imgray,mask = mask)
+						// 获得最大值，最小值，及他们的位置
+mean_val = cv2.mean(img,mask = mask)			// 获得平均颜色，或平均灰度（1：图片或灰度图）
+leftmost = tuple(cnt[cnt[:,:,0].argmin()][0])			// 获得最左的点
+rightmost = tuple(cnt[cnt[:,:,0].argmax()][0])		// 获得最右的点
+topmost = tuple(cnt[cnt[:,:,1].argmin()][0])			// 获得最上的点
+bottommost = tuple(cnt[cnt[:,:,1].argmax()][0]		// 获得最下的点
 
 ===========================================================================================================
 

@@ -2,6 +2,9 @@ import numpy
 
 方法
 
+img = np.uint8(img)					// 转换类型为 uint8
+img = np.int32(img)					// 转换类型为 int32
+
 img = np.zeros((512,512,3),np.uint8)			// 创建一个图片 全部值为 0 的矩阵( 元祖矩阵，类型np.uint8）
 img = np.ones((512,512,3),np.uint8）			// 创建一个图片 全部值为 1 的矩阵( 元祖矩阵，类型np.uint8）
 
@@ -10,6 +13,11 @@ img.itemset((10,10,2), 100)				// 设置图片上像素点上的值（（X轴，Y轴，通道），修
 img.shape						// 获取图片的宽高和通道，如果是灰度图就没有通道信息
 img.size						// 获取图片总像素
 img.dtype						// 获取每个像素的数据类型
+
+img = np.hstack(( array1, array2 ))			// 拼接两个数组
+otherImg = img.copy()				// 图片拷贝
+
+img = np.absolute(img)				// 绝对值
 
 np.square(var)					// 获取var平方
 np.random.uniform(low,high)				// 随机得到一给 low,到 high的数
@@ -34,6 +42,7 @@ kernel4=np.array([[-1,-1,-1],[-1,8,-1],[-1,-1,-1]])
 kernel5=np.array([[-2,-2,-2,-2,0],[-2,-2,-2,0,2],[-2,-2,0,2,2],[-2,0,2,2,2],[0,2,2,2,2]])
 
 ==========================================================
+
 pts = pts.reshape((-1,1,2))				// 将矩阵转换成Row（自动计算）*1*2的矩阵
 
 
