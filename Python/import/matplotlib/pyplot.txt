@@ -1,5 +1,8 @@
 from matplotlib import pyplot
 
 plt.imshow( imgVar, cmap = 'gray', interpolation = 'bicubic')		// 显示图片 ( imgVar 需要图片， interpolation = 'bicubic'优化图片）
-plt.xticks([]), plt.yticks([])						// 隐藏标尺
+plt.hist(img.ravel(),255,[0,256])					// 显示直方图
+plt.plot(histr,color=col)					// 增加线段
+plt.xticks([]), plt.yticks([])					// 隐藏标尺
+plt.xlim([0,256])						// 横向轴标尺
 plt.show()
