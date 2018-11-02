@@ -9,5 +9,6 @@ Misc\FileHelper.h
 ================================================================================================
 
 LoadFileToString					读取本地文件
+                          编辑器下默认路径为 Epic Games\UE_4.19\Engine\Binaries\Win64\RuntimeData
 SaveStringToFile					保存文件到本地
 
