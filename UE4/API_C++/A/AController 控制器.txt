@@ -21,11 +21,14 @@ PlayerState						玩家状态
 方法
 ================================================================================================
 
-GetPawn							获取到典当
-GetPlayerViewPoint					获取玩家视角的位置与旋转
-GetViewTarget						获取视角目标
+GetControlRotation 					获取控制器的旋转
+SetControlRotation					设置控制器旋转
 
-Possess							附加另一个典当
+GetPawn						获取到典当
+GetPlayerViewPoint					获取玩家视角的位置与旋转
+GetViewTarget					获取视角目标
+
+Possess						附加另一个典当
 UnPossess						把自身控制的典当移除
 
 
