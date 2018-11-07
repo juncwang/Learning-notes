@@ -17,8 +17,15 @@ UObject/NoExportTypes.h
 
 StaticClass							获取静态类
 
+头文件 UObject/ConstructorHelpers.h
+static ConstructorHelpers::FClassFinder				获取资源-蓝图
+static ConstructorHelpers::FObjectFinder			获取对象-组件
+
 ================================================================================================
 方法
 ================================================================================================
 
 CreateDefaultSubobject						创建默认子对象
+LoadObject							加载资源方法
+LoadClass							加载蓝图 (后面加 _C) 及 C++ 类方法, 返回一个 TSubclassOf
+NewObject							把TSubclassOf 类型数据转换为指针类型数据
