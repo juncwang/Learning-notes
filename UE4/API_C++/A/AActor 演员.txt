@@ -51,6 +51,7 @@ GetGameInstance							获取游戏实例
 GetLevel							获取关卡
 GetWorld							获取世界
 GetWorldTimerManager						获取世界计时器信息
+GetComponents							获取演员中的组件
 
 SetActorEnableCollision						设置演员启用碰撞
 SetActorHiddenInGame						设置演员隐藏在游戏内

@@ -1,0 +1,15 @@
+﻿================================================================================================
+创建方法
+================================================================================================
+
+TSharedPtr<IImageWrapper> ImageWrapper = ImageWrapperModule.CreateImageWrapper(EImageFormat::PNG);
+
+================================================================================================
+方法
+================================================================================================
+
+SetCompressed(RawFileData.GetData(), RawFileData.Num()))			设置图片压缩, 传入原始图片数据的
+SetRaw(_colorArray.GetData(), _colorArray.Num() * sizeof(FColor), 4096, 2048, ERGBFormat::RGBA, 8)	设置原始图片数据
+
+GetCompressed(100)							获取压缩率以后的图片数据, 用于保存
+GetRaw(ERGBFormat::RGBA, 8, uncompressedRGBA)				获取原始图片数据, 获得 uint8 数组, 可转为 FColor
