@@ -35,3 +35,15 @@ NativeTick						每帧调用事件
 AddToViewport						把界面添加到银屏上去
 GetWidgetFromName					用名字获取界面上的空间
 
+================================================================================================
+例子
+================================================================================================
+
+if ( TSubclassOfUIClass != nullptr)
+	{
+		UIClass = CreateWidget<UCUI_select>(GetWorld(), TSubclassOfUIClass );
+		if (ui_select != nullptr)
+		{
+			UIClass->AddToViewport();
+		}
+	}
